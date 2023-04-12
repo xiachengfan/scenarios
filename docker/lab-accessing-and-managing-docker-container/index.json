@@ -1,7 +1,7 @@
 {
   "type": "lab",
   "title": "Accessing and Managing Docker Container",
-  "description": "",
+  "description": "Accessing and Managing Docker Container",
   "difficulty": "Beginner",
   "time": 20,
   "details": {
@@ -93,7 +93,7 @@
     "assets": {
       "host01": [
         {
-          "file": "",
+          "file": "/tmp",
           "target": "/tmp"
         }
       ]
