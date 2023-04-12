@@ -1,0 +1,105 @@
+{
+  "type": "lab",
+  "title": "Accessing and Managing Docker Container",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1: Starting a Container",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the my-container container start.",
+            "file": "verify1.sh",
+            "hint": "Please start a docker container named my-container",
+            "timeout": 5,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/run",
+          "docker/logs"
+        ]
+      },
+      {
+        "title": "Step 2: Stopping a Container",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if the my-container container stop.",
+            "file": "verify2.sh",
+            "hint": "Please stop a docker container named my-container",
+            "timeout": 5,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/stop",
+          "docker/ps"
+        ]
+      },
+      {
+        "title": "Step 3: Executing Commands in a Container",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if the my-shell-container container start.",
+            "file": "verify3-1.sh",
+            "hint": "Please start a docker container named my-shell-container",
+            "timeout": 5,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the my-shell-container container stop.",
+            "file": "verify3-3.sh",
+            "hint": "Please stop a docker container named my-shell-container",
+            "timeout": 5,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/run",
+          "docker/exec",
+          "docker/stop"
+        ]
+      },
+      {
+        "title": "Step 4: Removing a Container",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if the grep my-shell-container container has been deleted.",
+            "file": "verify4.sh",
+            "hint": "Please delete the my-shell-container container.",
+            "timeout": 5,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/rm",
+          "docker/ps"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-ubuntu:2204"
+  }
+}
