@@ -1,6 +1,6 @@
 # Step 1: Starting a Container
-In this step, we will start a container and access its logs.
 
+In this step, we will start a container and access its logs.
 
 1. Run the following command to start a new container:
 

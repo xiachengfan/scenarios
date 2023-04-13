@@ -1,4 +1,5 @@
 # Step 2: Stopping a Container
+
 In this step, we will stop a running container.
 
 1. Run the following command to stop the container we started in the previous step:

@@ -1,4 +1,5 @@
 # Step 4: Removing a Container
+
 In this step, we will remove a container.
 
 1. Run the following command to remove the container we started in the previous step:
