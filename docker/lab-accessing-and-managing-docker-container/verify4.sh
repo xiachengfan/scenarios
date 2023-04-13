@@ -1,5 +1,5 @@
 #!/bin/bash
-if history | grep -Eq 'docker logs my-shell-container'; then
+if history |grep docker | grep my-shell-container | grep  -Eq rm; then
   exit 0
 else
   exit 1
