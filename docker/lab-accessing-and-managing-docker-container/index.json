@@ -12,8 +12,15 @@
         "verify": [
           {
             "name": "Check if the my-container container start.",
-            "file": "verify1.sh",
+            "file": "verify1-1.sh",
             "hint": "Please start a docker container named my-container",
+            "timeout": 5,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the my-container log has been viewed.",
+            "file": "verify1-2.sh",
+            "hint": "Please check the logs of the my-container container",
             "timeout": 5,
             "showstderr": false
           }
