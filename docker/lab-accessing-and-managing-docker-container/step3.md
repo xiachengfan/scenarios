@@ -1,4 +1,4 @@
-# Step 3: Executing Commands in a Container
+# Executing Commands in a Container
 
 In this step, we will execute a command inside a running container.
 

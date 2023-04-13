@@ -1,4 +1,4 @@
-# Step 1: Starting a Container
+# Starting a Container
 
 In this step, we will start a container and access its logs.
 

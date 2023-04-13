@@ -1,4 +1,4 @@
-# Step 4: Removing a Container
+# Removing a Container
 
 In this step, we will remove a container.
 

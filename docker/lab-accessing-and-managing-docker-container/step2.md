@@ -1,4 +1,4 @@
-# Step 2: Stopping a Container
+# Stopping a Container
 
 In this step, we will stop a running container.
 

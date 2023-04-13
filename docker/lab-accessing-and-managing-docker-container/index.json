@@ -7,7 +7,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1: Starting a Container",
+        "title": "Starting a Container",
         "text": "step1.md",
         "verify": [
           {
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "title": "Step 2: Stopping a Container",
+        "title": "Stopping a Container",
         "text": "step2.md",
         "verify": [
           {
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "title": "Step 3: Executing Commands in a Container",
+        "title": "Executing Commands in a Container",
         "text": "step3.md",
         "verify": [
           {
@@ -59,7 +59,7 @@
         ]
       },
       {
-        "title": "Step 4: Removing a Container",
+        "title": "Removing a Container",
         "text": "step4.md",
         "verify": [
           {
