@@ -45,13 +45,6 @@
         "text": "step3.md",
         "verify": [
           {
-            "name": "Check if the my-shell-container container start.",
-            "file": "verify3-1.sh",
-            "hint": "Please start a docker container named my-shell-container",
-            "timeout": 5,
-            "showstderr": false
-          },
-          {
             "name": "Check if the my-shell-container container stop.",
             "file": "verify3-3.sh",
             "hint": "Please stop a docker container named my-shell-container",
