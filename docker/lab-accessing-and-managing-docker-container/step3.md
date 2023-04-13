@@ -5,7 +5,7 @@ In this step, we will execute a command inside a running container.
 1. Run the following command to start a new container with a shell:
 
 ```
-docker run -it --name my-shell-container ubuntu sleep 3600
+docker run -d --name my-shell-container ubuntu sleep 3600
 ```
 
 This command starts a new container based on the `ubuntu` image and gives it a name of `my-shell-container`. The `/bin/bash` command starts a shell inside the container.
