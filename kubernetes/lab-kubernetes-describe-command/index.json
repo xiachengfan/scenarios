@@ -49,9 +49,7 @@
             "showstderr": false
           }
         ],
-        "skills": [
-          ""
-        ]
+        "skills": []
       },
       {
         "title": "Describe a Service",
@@ -72,8 +70,7 @@
             "showstderr": false
           }
         ],
-        "skills": [
-        ]
+        "skills": []
       }
     ],
     "intro": {
