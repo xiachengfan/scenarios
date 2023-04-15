@@ -26,7 +26,8 @@
           }
         ],
         "skills": [
-          "Please copy the skill ID from the official skill tree"
+          "kubernetes/describe",
+          "kubernetes/apply"
         ]
       },
       {
@@ -72,8 +73,6 @@
           }
         ],
         "skills": [
-          "kubernetes/describe",
-          "kubernetes/apply"
         ]
       }
     ],
