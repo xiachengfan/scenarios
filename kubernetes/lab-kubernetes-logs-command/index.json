@@ -18,9 +18,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if to use the log command to view pod logs",
+            "name": "Check if to use the logs command to view pod logs",
             "file": "verify1-2.sh",
-            "hint": "Please use the log command to view the pod logs",
+            "hint": "Please use the logs command to view the pod logs",
             "timeout": 0,
             "showstderr": false
           }
@@ -42,9 +42,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if the command log <pod_name> -c <container_name> is used to view the logs of the busybox container in the pod named nginx-busybox.",
+            "name": "Check if the command logs <pod_name> -c <container_name> is used to view the logs of the busybox container in the pod named nginx-busybox.",
             "file": "verify2-2.sh",
-            "hint": "Please use the log <pod_name> -c <container_name> command to view the logs of the busybox container in the Pod named nginx-busybox",
+            "hint": "Please use the logs <pod_name> -c <container_name> command to view the logs of the busybox container in the Pod named nginx-busybox",
             "timeout": 0,
             "showstderr": false
           }
@@ -91,9 +91,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if the command log <pod_name> -c <container_name> is used to view the logs of the fluentd and nginx container in the pod named nginx-busybox. ",
+            "name": "Check if the command logs <pod_name> -c <container_name> is used to view the logs of the fluentd and nginx container in the pod named nginx-busybox. ",
             "file": "verify4-2.sh",
-            "hint": "Please use the log <pod_name> -c <container_name> command to view the logs of the fluentd and nginx container in the Pod named nginx-busybox.",
+            "hint": "Please use the logs <pod_name> -c <container_name> command to view the logs of the fluentd and nginx container in the Pod named nginx-busybox.",
             "timeout": 0,
             "showstderr": false
           }
