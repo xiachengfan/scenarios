@@ -37,14 +37,14 @@
           {
             "name": "Check if Pod named nginx-busybox has been created in the cluster",
             "file": "verify2-1.sh",
-            "hint": "Please create a pod named nginx-busybox through step 1",
+            "hint": "Please create a Pod named nginx-busybox through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if the command log <pod_name> -c <container_name> is used to view the logs of the busybox container in the pod named nginx-busybox.",
             "file": "verify2-2.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please use the log <pod_name> -c <container_name> command to view the logs of the busybox container in the Pod named nginx-busybox",
             "timeout": 0,
             "showstderr": false
           }
@@ -56,23 +56,23 @@
         "text": "step3.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if to use the log -f command to view pod logs",
             "file": "verify3-1.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please use the log -f command to view the pod logs",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if a new terminal is opened and create a shell in the Nginx container",
             "file": "verify3-2.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please open a new terminal and create a shell in the Nginx container",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if a 'This is a test log' log record has been generated",
             "file": "verify3-3.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please generate a 'This is a test log' record through steps 2 and 3",
             "timeout": 0,
             "showstderr": false
           }
@@ -91,9 +91,9 @@
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if the command log <pod_name> -c <container_name> is used to view the logs of the fluentd and nginx container in the pod named nginx-busybox. ",
             "file": "verify4-2.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please use the log <pod_name> -c <container_name> command to view the logs of the fluentd and nginx container in the Pod named nginx-busybox.",
             "timeout": 0,
             "showstderr": false
           }
