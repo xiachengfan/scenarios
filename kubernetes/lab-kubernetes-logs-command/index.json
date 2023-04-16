@@ -11,16 +11,16 @@
         "text": "step1.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
-            "file": "verify1.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "name": "Check if Pod named nginx has been created in the cluster",
+            "file": "verify1-1.sh",
+            "hint": "Please create a pod named nginx through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
-            "file": "verify1.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "name": "Check if to use the log command to view pod logs",
+            "file": "verify1-2.sh",
+            "hint": "Please use the log command to view the pod logs",
             "timeout": 0,
             "showstderr": false
           }
@@ -35,15 +35,15 @@
         "text": "step2.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
-            "file": "verify2.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "name": "Check if Pod named nginx-busybox has been created in the cluster",
+            "file": "verify2-1.sh",
+            "hint": "Please create a pod named nginx-busybox through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
             "name": "Please replace this text with the target of the verify script",
-            "file": "verify1.sh",
+            "file": "verify2-2.sh",
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
@@ -57,21 +57,21 @@
         "verify": [
           {
             "name": "Please replace this text with the target of the verify script",
-            "file": "verify3.sh",
+            "file": "verify3-1.sh",
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
           },
           {
             "name": "Please replace this text with the target of the verify script",
-            "file": "verify1.sh",
+            "file": "verify3-2.sh",
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
           },
           {
             "name": "Please replace this text with the target of the verify script",
-            "file": "verify1.sh",
+            "file": "verify3-3.sh",
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
@@ -84,15 +84,15 @@
         "text": "step4.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
-            "file": "verify4.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "name": "Check if Pod named nginx-fluentd has been created in the cluster",
+            "file": "verify4-1.sh",
+            "hint": "Please create a pod named nginx-fluentd through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
             "name": "Please replace this text with the target of the verify script",
-            "file": "verify1.sh",
+            "file": "verify4-2.sh",
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
