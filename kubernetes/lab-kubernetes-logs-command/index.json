@@ -16,10 +16,18 @@
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
           }
         ],
         "skills": [
-          "Please copy the skill ID from the official skill tree"
+          "kubernetes/logs",
+          "kubernetes/create"
         ]
       },
       {
@@ -32,11 +40,16 @@
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
           }
         ],
-        "skills": [
-          "Please copy the skill ID from the official skill tree"
-        ]
+        "skills": []
       },
       {
         "title": "Following Logs in Real-Time",
@@ -48,11 +61,23 @@
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
           }
         ],
-        "skills": [
-          "Please copy the skill ID from the official skill tree"
-        ]
+        "skills": ["kubernetes/create"]
       },
       {
         "title": "Viewing Logs from Multiple Containers",
@@ -64,11 +89,16 @@
             "hint": "Please replace this text with the hint of the verify script",
             "timeout": 0,
             "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
           }
         ],
-        "skills": [
-          "Please copy the skill ID from the official skill tree"
-        ]
+        "skills": []
       }
     ],
     "intro": {
