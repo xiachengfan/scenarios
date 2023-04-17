@@ -1,7 +1,7 @@
 {
   "type": "lab",
   "title": "Kubernetes-Describe-Command",
-  "description": "Learn to use Kubernetes to describe commands",
+  "description": "The describe command provides detailed resource information for troubleshooting Kubernetes via the command line interface.",
   "difficulty": "Beginner",
   "time": 20,
   "details": {
