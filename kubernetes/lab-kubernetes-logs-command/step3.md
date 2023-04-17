@@ -5,13 +5,13 @@ In this step, you will learn how to follow logs in real-time as they are generat
 1. Use the `kubectl logs` command with the `-f` option to follow logs in real-time:
 
    ```bash
-   kubectl logs -f <pod_name>
+   kubectl logs -f nginx-busybox
    ```
 
 2. Open a new terminal and create a shell in the Nginx container:
 
    ```bash
-   kubectl exec -it <pod_name> -c nginx -- /bin/sh
+   kubectl exec -it nginx-busybox -c nginx -- /bin/sh
    ```
 
 3. Generate some logs by running a command inside the container:
