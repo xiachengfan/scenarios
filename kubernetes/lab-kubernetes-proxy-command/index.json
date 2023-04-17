@@ -54,6 +54,6 @@
     }
   },
   "backend": {
-    "imageid": "vnc-instance-ubuntu:2204"
+    "imageid": "webide-instance-ubuntu:2204"
   }
 }
