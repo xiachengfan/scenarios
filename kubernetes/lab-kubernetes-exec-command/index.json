@@ -1,0 +1,93 @@
+{
+  "type": "lab",
+  "title": "Kubernetes-Exec-Command",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Executing a Command in a Container",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Executing a Command in a Specific Container",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify2.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Executing a Command with a Tty",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify3.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Executing a Command with Environment Variables",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}
