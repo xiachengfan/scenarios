@@ -1,6 +1,6 @@
 # Access the Kubernetes Api with Curl
 
-In this step, you will learn how to access the Kubernetes API server using cURL through the proxy server.
+Open a new terminal and use the following command to access the API server.
 
 Here is the basic command you will use to access the API server with `curl`:
 
