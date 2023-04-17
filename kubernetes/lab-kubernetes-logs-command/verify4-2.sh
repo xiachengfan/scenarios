@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cat ~/.zsh_history |grep kubectl | grep fluentd| grep nginx-fluentd | grep  -Eq logs
-cat ~/.zsh_history |grep kubectl | grep nginx  | grep nginx-fluentd | grep  -Eq logs
+cat ~/.zsh_history |grep -q 'kubectl\s\+logs\s\+nginx-fluentd\s\+-c\s\+nginx'
+cat ~/.zsh_history |grep -q 'kubectl\s\+logs\s\+nginx-fluentd\s\+-c\s\+fluentd'
