@@ -20,5 +20,4 @@ In this step, you will learn how to view the logs of a container running in a po
    kubectl logs <pod_name>
    ```
 
-   You can get the `<pod_name>` with the `kubectl get pod -l app=nginx` command.
-   Replace `<pod_name>` with the name of the pod created in step 1.
+Replace `<pod_name>` with the name of the pod created in step 1, and you can get the `<pod_name>` with the `kubectl get pod -l app=nginx` command.
