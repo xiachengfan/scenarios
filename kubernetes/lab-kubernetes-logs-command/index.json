@@ -1,7 +1,7 @@
 {
   "type": "lab",
   "title": "Kubernetes-Logs-Command",
-  "description": "lab-Kubernetes-Logs-Command",
+  "description": "The logs command outputs the logs of the containers in the pod to help users troubleshoot the abnormal conditions of the containers",
   "difficulty": "Beginner",
   "time": 20,
   "details": {
@@ -70,9 +70,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if a 'This is a test log' log record has been generated",
+            "name": "Check if there is a log record of access",
             "file": "verify3-3.sh",
-            "hint": "Please generate a 'This is a test log' record through steps 2 and 3",
+            "hint": "Please visit Port 80 of Pod through steps 2 and 3",
             "timeout": 0,
             "showstderr": false
           }

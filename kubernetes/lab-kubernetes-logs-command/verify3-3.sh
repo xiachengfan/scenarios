@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-minikube kubectl -- logs nginx| grep "This is a test log"
+minikube kubectl -- logs nginx| grep "127.0.0.1"
