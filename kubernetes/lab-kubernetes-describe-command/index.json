@@ -1,7 +1,7 @@
 {
   "type": "lab",
   "title": "Kubernetes-Describe-Command",
-  "description": "Lab-Kubernetes-Describe-Command",
+  "description": "Learn to use Kubernetes to describe commands",
   "difficulty": "Beginner",
   "time": 20,
   "details": {
