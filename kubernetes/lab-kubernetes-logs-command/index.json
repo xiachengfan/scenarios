@@ -25,10 +25,7 @@
             "showstderr": false
           }
         ],
-        "skills": [
-          "kubernetes/logs",
-          "kubernetes/create"
-        ]
+        "skills": ["kubernetes/logs", "kubernetes/create"]
       },
       {
         "title": "Viewing Logs from a Specific Container in a Pod",
@@ -118,6 +115,6 @@
     }
   },
   "backend": {
-    "imageid": "vnc-instance-ubuntu:2204"
+    "imageid": "webide-instance-ubuntu:2204"
   }
 }
