@@ -1,0 +1,103 @@
+{
+  "type": "lab",
+  "title": "Kubernetes-Architecture",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Kubernetes Control Plane Components",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/k8s_architecture"
+        ]
+      },
+      {
+        "title": "Kubernetes Node Components",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify2.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/get"]
+      },
+      {
+        "title": "Kubernetes Pod Components",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify3.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/apply"
+        ]
+      },
+      {
+        "title": "Kubernetes Service Components",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": []
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}
