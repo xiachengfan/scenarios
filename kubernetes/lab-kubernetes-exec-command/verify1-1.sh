@@ -1,1 +1,3 @@
-#!/bin/zsh
+#!/bin/bash
+
+minikube kubectl -- get pod | grep "nginx"
