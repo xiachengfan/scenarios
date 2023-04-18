@@ -1,7 +1,7 @@
 {
   "type": "lab",
   "title": "Kubernetes Architecture",
-  "description": "",
+  "description": "Learn container orchestration automation to improve the competitiveness of cloud native technology.",
   "difficulty": "Beginner",
   "time": 20,
   "details": {
@@ -11,15 +11,15 @@
         "text": "step1.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if the `kubectl get componentstatuses` command is executed",
             "file": "verify1.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please execute the `kubectl get componentstatuses` command",
             "timeout": 0,
             "showstderr": false
           }
         ],
         "skills": [
-          "kubernetes/k8s_architecture"
+          "kubernetes/get"
         ]
       },
       {
@@ -27,9 +27,9 @@
         "text": "step2.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if the `kubectl get nodes` command is executed",
             "file": "verify2.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please execute the `kubectl get nodes` command",
             "timeout": 0,
             "showstderr": false
           }
@@ -41,16 +41,16 @@
         "text": "step3.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if Pod named simple-pod has been created in the cluster",
             "file": "verify3.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please create a pod named simple-pod through step1 and step1",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if the `kubectl get pods` command is executed",
             "file": "verify4.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please execute the `kubectl get pods` command",
             "timeout": 0,
             "showstderr": false
           }
@@ -64,16 +64,16 @@
         "text": "step4.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if Service named nginx-service has been created in the cluster",
             "file": "verify4.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please create a Service named nginx-service through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if the `kubectl get services` command is executed",
             "file": "verify4.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please execute the `kubectl get services` command",
             "timeout": 0,
             "showstderr": false
           }
