@@ -31,7 +31,5 @@ In this step, you will learn how to execute a command in a specific container ru
 3. Use the `kubectl exec` command to execute a command inside the BusyBox container:
 
    ```bash
-   kubectl exec <pod_name> -c busybox -- ls /bin
+   kubectl exec nginx-busybox -c busybox -- ls /bin
    ```
-
-   Replace `<pod_name>` with the name of the pod created in step 1.
