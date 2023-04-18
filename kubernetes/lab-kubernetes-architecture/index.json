@@ -42,14 +42,14 @@
         "verify": [
           {
             "name": "Check if Pod named simple-pod has been created in the cluster",
-            "file": "verify3.sh",
+            "file": "verify3-1.sh",
             "hint": "Please create a pod named simple-pod through step1 and step1",
             "timeout": 0,
             "showstderr": false
           },
           {
             "name": "Check if the `kubectl get pods` command is executed",
-            "file": "verify4.sh",
+            "file": "verify3-2.sh",
             "hint": "Please execute the `kubectl get pods` command",
             "timeout": 0,
             "showstderr": false
@@ -65,14 +65,14 @@
         "verify": [
           {
             "name": "Check if Service named nginx-service has been created in the cluster",
-            "file": "verify4.sh",
+            "file": "verify4-1.sh",
             "hint": "Please create a Service named nginx-service through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
             "name": "Check if the `kubectl get services` command is executed",
-            "file": "verify4.sh",
+            "file": "verify4-2.sh",
             "hint": "Please execute the `kubectl get services` command",
             "timeout": 0,
             "showstderr": false
