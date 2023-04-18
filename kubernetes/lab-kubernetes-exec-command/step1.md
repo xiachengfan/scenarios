@@ -20,4 +20,4 @@ In this step, you will learn how to execute a command in a container running in 
    kubectl exec <pod_name> -- nginx -v
    ```
 
-   Replace `<pod_name>` with the name of the pod created in step 1.
+   Replace <pod_name> with the name of the pod created in step 1, and you can get the <pod_name> with the kubectl get pod -l app=nginx command.

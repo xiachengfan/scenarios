@@ -1,7 +1,7 @@
 {
   "type": "lab",
   "title": "Kubernetes-Exec-Command",
-  "description": "",
+  "description": "Can use the exec command to execute some commands inside the container to debug and troubleshoot problems, such as viewing logs, viewing the internal file system of the container.",
   "difficulty": "Beginner",
   "time": 20,
   "details": {
@@ -18,9 +18,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if to use the logs command to view pod logs",
+            "name": "Check if executing `kubectl exec` inside nginx pod",
             "file": "verify1-2.sh",
-            "hint": "Please use the logs command to view the pod logs",
+            "hint": "Please execute `kubectl exec` inside nginx pod",
             "timeout": 0,
             "showstderr": false
           }
@@ -39,9 +39,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if Pod named nginx-busybox has been created in the cluster",
+            "name": "Check if executing `kubectl exec` inside nginx-busybox pod",
             "file": "verify2-2.sh",
-            "hint": "Please create a Pod named nginx-busybox through step 1",
+            "hint": "Please execute `kubectl exec` inside nginx-busybox pod",
             "timeout": 0,
             "showstderr": false
           }
@@ -53,9 +53,9 @@
         "text": "step3.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if executing `kubectl exec -it` inside nginx-busybox pod",
             "file": "verify3.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please execute `kubectl exec -it` inside nginx-busybox pod",
             "timeout": 0,
             "showstderr": false
           }
@@ -67,16 +67,16 @@
         "text": "step4.md",
         "verify": [
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if Pod named nginx-env has been created in the cluster",
             "file": "verify4-1.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please create a Pod named nginx-env through step 1",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Please replace this text with the target of the verify script",
+            "name": "Check if executing `kubectl exec ` inside nginx-env pod",
             "file": "verify4-2.sh",
-            "hint": "Please replace this text with the hint of the verify script",
+            "hint": "Please execute `kubectl exec` inside nginx-env pod",
             "timeout": 0,
             "showstderr": false
           }

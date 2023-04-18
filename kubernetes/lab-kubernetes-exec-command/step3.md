@@ -5,7 +5,7 @@ In this step, you will learn how to execute a command with a tty in a container.
 1. Use the `kubectl exec` command with the `-it` options to execute a command with a tty:
 
    ```bash
-   kubectl exec -it <pod_name> -- /bin/sh
+   kubectl exec -it nginx-busybox -- /bin/sh
    ```
 
 2. Once inside the container shell, run a command:
