@@ -1,4 +1,4 @@
-# Forwarding a local port to a pod
+# Forwarding a Local Port to a Pod
 
 In this step, you will learn how to forward a local port to a port on a pod.
 

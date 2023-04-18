@@ -1,4 +1,4 @@
-# Using port-forward with Kubernetes services
+# Using Port-Forward with Kubernetes Services
 
 In this step, you will learn how to use the `kubectl port-forward` command with Kubernetes services.
 

@@ -1,4 +1,4 @@
-# Forwarding a local port to a pod with multiple containers
+# Forwarding a Local Port to a Pod with Multiple Containers
 
 In this step, you will learn how to forward a local port to a specific container in a pod with multiple containers.
 

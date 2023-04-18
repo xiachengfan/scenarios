@@ -1,4 +1,4 @@
-# Forwarding multiple local ports to a pod
+# Forwarding Multiple Local Ports to a Pod
 
 In this step, you will learn how to forward multiple local ports to a pod.
 
