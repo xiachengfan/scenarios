@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat ~/.zsh_history |grep kubectl| grep  -Eq proxy
+curl http://localhost:8001/api/v1/pods
