@@ -11,9 +11,9 @@
         "text": "step1.md",
         "verify": [
           {
-            "name": "Check if Namespace named mynamespace has been created in the cluster",
+            "name": "Check if Namespace named mynamespace has been created in the cluster.",
             "file": "verify1-1.sh",
-            "hint": "Please create a Namespace  named mynamespace  through step1 and step2",
+            "hint": "Please create a Namespace  named mynamespace  through step1 and step2.",
             "timeout": 0,
             "showstderr": false
           },
