@@ -1,3 +1,3 @@
 #!/bin/bash
 
-minikube kubectl -- get pod | grep "nginx"|grep "MY_VAR=my-value"
+minikube kubectl -- describe pod nginx-env |grep MY_VAR |grep my-value
