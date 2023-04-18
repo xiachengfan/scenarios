@@ -1,0 +1,137 @@
+{
+  "type": "lab",
+  "title": "Running Pod with Daemonsets",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Pod",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Create a Daemonset",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify2.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Verify the Daemonset",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify3.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Update the Daemonset",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Verify the Update",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Please replace this text with the target of the verify script",
+            "file": "verify5.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}
