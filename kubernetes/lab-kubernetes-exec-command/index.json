@@ -1,6 +1,6 @@
 {
   "type": "lab",
-  "title": "Kubernetes-Exec-Command",
+  "title": "Kubernetes Exec Command",
   "description": "Can use the exec command to execute some commands inside the container to debug and troubleshoot problems, such as viewing logs, viewing the internal file system of the container.",
   "difficulty": "Beginner",
   "time": 20,
