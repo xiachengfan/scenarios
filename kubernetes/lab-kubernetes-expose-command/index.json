@@ -50,7 +50,7 @@
                     },
                     {
                         "name": "Check if the `curl <NODE_IP>:<NODE_PORT>` -o wide command is used",
-                        "file": "verify2-1.sh",
+                        "file": "verify2-2.sh",
                         "hint": "Please use the `curl <NODE_IP>:<NODE_PORT>` -o wide command",
                         "timeout": 0,
                         "showstderr": false
