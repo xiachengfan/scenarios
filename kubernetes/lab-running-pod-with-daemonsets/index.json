@@ -93,20 +93,6 @@
           }
         ],
         "skills": []
-      },
-      {
-        "title": "Verify the Update",
-        "text": "step5.md",
-        "verify": [
-          {
-            "name": "Check if the `kubectl get pods -l app=myapp` command is executed",
-            "file": "verify5.sh",
-            "hint": "Please execute kubectl get pods -l app=myapp` command",
-            "timeout": 0,
-            "showstderr": false
-          }
-        ],
-        "skills": []
       }
     ],
     "intro": {

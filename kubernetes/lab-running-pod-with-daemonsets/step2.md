@@ -1,6 +1,6 @@
 # Create a Daemonset
 
-Create a DaemonSet to run replicas of the `myapp-pod` on every node in the cluster. Create a file called `myapp-daemonset.yaml` with the following contents:
+Create a DaemonSet to run replicas of the `myapp-pod` on every node in the cluster. Create a file called `/home/labex/project/myapp-daemonset.yaml` with the following contents:
 
 ```yaml
 apiVersion: apps/v1
@@ -28,5 +28,5 @@ This DaemonSet uses the `myapp-pod` as the template for the replicas and sets th
 Create the DaemonSet using the following command:
 
 ```shell
-kubectl apply -f myapp-daemonset.yaml
+kubectl apply -f /home/labex/project/myapp-daemonset.yaml
 ```

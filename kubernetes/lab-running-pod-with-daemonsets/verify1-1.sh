@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo test -f /home/labex/myapp-pod.yaml
+sudo test -f /home/labex/project/myapp-pod.yaml
