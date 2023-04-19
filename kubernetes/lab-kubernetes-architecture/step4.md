@@ -6,7 +6,7 @@ The Kubernetes service is an abstraction that defines a logical set of pods and 
 - **Service Port**: A port number assigned to the service that allows applications to access the pods running behind the service.
 - **Endpoint**: A list of IP addresses and port numbers that point to the pods running behind the service.
 
-To create a simple service that exposes the nginx pod we created in the previous step, use the following YAML file:
+Create a file called `nginx-service.yaml` with the following content:
 
 ```yaml
 apiVersion: v1

@@ -5,7 +5,7 @@ The Kubernetes pod is the smallest deployable unit in Kubernetes, representing a
 - **pause container**: The pause container is a special container that runs in every pod and is responsible for holding the network namespace open and sharing it with other containers in the pod.
 - **application container(s)**: The application container(s) run in the pod and execute the application code.
 
-To create a simple pod with a single container, use the following YAML file:
+Create a file called `simple-pod.yaml` with the following content:
 
 ```yaml
 apiVersion: v1
