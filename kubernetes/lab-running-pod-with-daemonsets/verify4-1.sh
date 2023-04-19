@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo test -f /home/labex/my-pod.yaml
+sudo test -f /home/labex/myapp-daemonset-update.yaml
