@@ -43,7 +43,7 @@
                     },
                     {
                         "name": "Check if the `kubectl get pod job1` command is executed",
-                        "file": "verify2-1.sh",
+                        "file": "verify2-2.sh",
                         "hint": "Please execute `kubectl get pod job1` command",
                         "timeout": 0,
                         "showstderr": false
