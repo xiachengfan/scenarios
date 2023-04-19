@@ -1,1 +1,1 @@
-#!/bin/zsh
+minikube start
