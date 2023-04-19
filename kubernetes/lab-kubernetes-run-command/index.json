@@ -13,7 +13,7 @@
                     {
                         "name": "Check if the Pod is created in the cluster.",
                         "file": "verify1-1.sh",
-                        "hint": "Please create the Pod via the YAML file in step 2.",
+                        "hint": "Please create a pod through step 1.",
                         "timeout": 10,
                         "showstderr": false
                     },
@@ -37,7 +37,7 @@
                     {
                         "name": "Check if the Pod is created in the cluster.",
                         "file": "verify2-1.sh",
-                        "hint": "Please create the Pod via the YAML file in step 2.",
+                        "hint": "Please create a pod through step 1.",
                         "timeout": 10,
                         "showstderr": false
                     },
