@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl http://localhost:80
+cat ~/.zsh_history | grep kubectl |grep expose|grep deployment
