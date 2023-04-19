@@ -21,7 +21,7 @@ In this step, we will expose a deployment using the `expose` command. We will cr
 3. Get the details of the `hello-service` service:
 
    ```bash
-   kubectl get service hello-service
+   kubectl get services hello-service
    ```
 
    This command will show the details of the `hello-service` service, including the `PORT(S)` on which the service is listening.
