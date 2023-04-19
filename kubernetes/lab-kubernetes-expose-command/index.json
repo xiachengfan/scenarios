@@ -25,9 +25,9 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the kubectl get service hello-service command is used",
+                        "name": "Check if the `kubectl get service hello-service` command is used",
                         "file": "verify1-3.sh",
-                        "hint": "Please use the kubectl get service hello-service command",
+                        "hint": "Please use the `kubectl get service hello-service` command",
                         "timeout": 0,
                         "showstderr": false
                     }
@@ -42,9 +42,16 @@
                 "text": "step2.md",
                 "verify": [
                     {
-                        "name": "Check if the kubectl get nodes -o wide command is used",
+                        "name": "Check if the `kubectl get nodes` -o wide command is used",
                         "file": "verify2-1.sh",
-                        "hint": "Please use the kubectl get nodes -o wide command",
+                        "hint": "Please use the `kubectl get nodes` -o wide command",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if the `curl <NODE_IP>:<NODE_PORT>` -o wide command is used",
+                        "file": "verify2-1.sh",
+                        "hint": "Please use the `curl <NODE_IP>:<NODE_PORT>` -o wide command",
                         "timeout": 0,
                         "showstderr": false
                     }
