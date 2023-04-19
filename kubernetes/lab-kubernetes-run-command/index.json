@@ -18,9 +18,9 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the `kubectl get deployments` command is executed",
+                        "name": "Check if the `kubectl get pods` command is executed",
                         "file": "verify1-2.sh",
-                        "hint": "Please execute `kubectl get deployments` command",
+                        "hint": "Please execute `kubectl get pods` command",
                         "timeout": 0,
                         "showstderr": false
                     }
