@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat ~/.zsh_history | grep kubectl | |grep get|grep jsonpath
+cat ~/.zsh_history | grep kubectl |grep get|grep jsonpath

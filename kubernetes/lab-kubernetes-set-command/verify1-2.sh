@@ -1,2 +1,2 @@
 #!/bin/bash
-cat ~/.zsh_history | grep kubectl | |grep set
+cat ~/.zsh_history | grep kubectl |grep set
