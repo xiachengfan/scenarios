@@ -33,7 +33,8 @@
                     }
                 ],
                 "skills": [
-                    "kubernetes/cordon","kubernetes/get"
+                    "kubernetes/cordon",
+                    "kubernetes/get"
                 ]
             },
             {
@@ -85,9 +86,7 @@
                         "showstderr": false
                     }
                 ],
-                "skills": [
-                    "Please copy the skill ID from the official skill tree"
-                ]
+                "skills": []
             },
             {
                 "title": "Please replace this text with the title of the step",
@@ -122,9 +121,7 @@
                         "showstderr": false
                     }
                 ],
-                "skills": [
-                    "Please copy the skill ID from the official skill tree"
-                ]
+                "skills": []
             }
         ],
         "intro": {
