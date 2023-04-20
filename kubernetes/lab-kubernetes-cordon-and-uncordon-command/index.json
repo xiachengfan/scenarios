@@ -66,8 +66,15 @@
                     },
                     {
                         "name": "Check if the command is executed",
+                        "file": "verify3-2.sh",
+                        "hint": "Please execute `kubectl cordon minikube` command",
+                        "timeout": 10,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if the command is executed",
                         "file": "verify3-3.sh",
-                        "hint": "Please perform steps 2 and 3 again",
+                        "hint": "Please execute `kubectl apply -f deploy.yaml` command",
                         "timeout": 10,
                         "showstderr": false
                     },
