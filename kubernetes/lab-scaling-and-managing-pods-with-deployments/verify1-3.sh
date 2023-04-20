@@ -2,7 +2,7 @@
 REPLICAS_DESIRED=3
 
 # 获取实际副本数
-REPLICAS_CURRENT=$(minikube kubectl -- deployment my-deployment -o=jsonpath='{.spec.replicas}')
+REPLICAS_CURRENT=$(minikube kubectl -- get deployment my-deployment -o=jsonpath='{.spec.replicas}')
 
 # 比较副本数
 if [ "$REPLICAS_DESIRED" -eq "$REPLICAS_CURRENT" ]; then
