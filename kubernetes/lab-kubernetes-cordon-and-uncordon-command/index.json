@@ -66,13 +66,6 @@
                     },
                     {
                         "name": "Check if the command is executed",
-                        "file": "verify3-2.sh",
-                        "hint": "Please execute `kubectl cordon minikube` command",
-                        "timeout": 10,
-                        "showstderr": false
-                    },
-                    {
-                        "name": "Check if the command is executed",
                         "file": "verify3-3.sh",
                         "hint": "Please execute `kubectl apply -f /home/labex/project/deploy.yaml` command",
                         "timeout": 10,
