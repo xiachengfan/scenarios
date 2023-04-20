@@ -1,3 +1,3 @@
 #!/bin/bash
 
-minikube kubectl -- get nodes | grep SchedulingDisabled
+minikube kubectl -- describe nodes | grep -E 'Unschedulable:[[:space:]]+true'
