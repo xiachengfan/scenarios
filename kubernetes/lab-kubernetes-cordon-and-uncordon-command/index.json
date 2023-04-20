@@ -43,7 +43,7 @@
                 "verify": [
                     {
                         "name": "Check if the command is executed",
-                        "file": "verify2-1.sh",
+                        "file": "verify2.sh",
                         "hint": "Please execute `kubectl uncordon minikube` command",
                         "timeout": 0,
                         "showstderr": false
