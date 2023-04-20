@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 data=$(minikube kubectl -- get configmap my-configmap -o jsonpath='{.data}')
 
