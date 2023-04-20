@@ -18,14 +18,14 @@
             "showstderr": false
           },
           {
-            "name": "Check if the `kubectl set image deployment/hello-world nginx=nginx:1.19.10` command is executed",
+            "name": "Check if the command is executed",
             "file": "verify1-2.sh",
             "hint": "Please execute `kubectl set image deployment/hello-world nginx=nginx:1.19.10` command",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Check if the `kubectl get deployment hello-world -o jsonpath='{.spec.template.spec.containers[0].image}'` command is executed",
+            "name": "Check if the command is executed",
             "file": "verify1-3.sh",
             "hint": "Please execute `kubectl get deployment hello-world -o jsonpath='{.spec.template.spec.containers[0].image}'` command",
             "timeout": 0,
@@ -43,14 +43,14 @@
         "text": "step2.md",
         "verify": [
           {
-            "name": "Check if the `kubectl set resources deployment/hello-world --limits=cpu=1,memory=512Mi --requests=cpu=500m,memory=256Mi` command is executed",
+            "name": "Check if the command is executed",
             "file": "verify2-1.sh",
             "hint": "Please execute `kubectl set resources deployment/hello-world --limits=cpu=1,memory=512Mi --requests=cpu=500m,memory=256Mi` command",
             "timeout": 0,
             "showstderr": false
           },
           {
-            "name": "Check if the `kubectl describe deployment hello-world` command is executed",
+            "name": "Check if the command is executed",
             "file": "verify2-2.sh",
             "hint": "Please execute `kubectl describe deployment hello-world` command",
             "timeout": 0,
