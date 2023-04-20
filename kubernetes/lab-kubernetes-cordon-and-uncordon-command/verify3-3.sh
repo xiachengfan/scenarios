@@ -2,10 +2,9 @@
 
 cat ~/.zsh_history | grep kubectl |grep apply
 
-POD=$(kubectl get pods -l app=nginx -o jsonpath='{.items[0].metadata.name}')
-
-if kubectl wait --for=condition=ready pod/$POD --timeout=3m; then
-  exit 1
-else
-  echo 0
+sleep 60
+if $(kubectl get pods | grep nginx | awk '{print $3}') == "Pending";then
+        exit 0
+esle
+        exit 2
 fi
