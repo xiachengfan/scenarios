@@ -2,7 +2,7 @@
 
 In this step, you will create a ConfigMap containing the configuration data for your application.
 
-Create a file named `configmap.yaml` with the following contents:
+Create a file named `/home/labex/project/configmap.yaml` with the following contents:
 
 ```yaml
 apiVersion: v1
@@ -18,5 +18,5 @@ This ConfigMap contains a single key-value pair, where the key is `DATABASE_URL`
 To create the ConfigMap, run the following command:
 
 ```bash
-kubectl apply -f configmap.yaml
+kubectl apply -f /home/labex/project/configmap.yaml
 ```
