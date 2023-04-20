@@ -1,4 +1,4 @@
 #!/bin/bash
 
-minikube kubectl -- describe nodes | grep -E 'Unschedulable:[[:space:]]+true'
+cat ~/.zsh_history | grep kubectl |grep cordon |grep minikube
 
