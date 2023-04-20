@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cat ~/.zsh_history | grep kubectl |grep apply
-
+minikube kubectl -- get pods | grep nginx 
 if $(minikube kubectl -- get pods | grep nginx | awk '{print $3}') -eq "Pending";then
         exit 0
 esle
