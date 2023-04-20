@@ -14,21 +14,21 @@
                         "name": "Check if the command is executed",
                         "file": "verify1-1.sh",
                         "hint": "Please execute `kubectl get nodes` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify1-2.sh",
                         "hint": "Please execute `kubectl cordon minikube` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify1-3.sh",
                         "hint": "Please execute `kubectl get node | grep SchedulingDisabled` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     }
                 ],
@@ -45,7 +45,7 @@
                         "name": "Check if the command is executed",
                         "file": "verify2.sh",
                         "hint": "Please execute `kubectl uncordon minikube` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     }
                 ],
@@ -68,21 +68,21 @@
                         "name": "Check if the command is executed",
                         "file": "verify3-2.sh",
                         "hint": "Please execute `kubectl cordon minikube` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify3-3.sh",
-                        "hint": "Please execute `kubectl apply -f deploy.yaml` command",
-                        "timeout": 0,
+                        "hint": "Please execute `kubectl apply -f /home/labex/project/deploy.yaml` command",
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify3-4.sh",
                         "hint": "Please execute `kubectl uncordon minikube` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     }
                 ],
@@ -96,28 +96,28 @@
                         "name": "Check if the command is executed",
                         "file": "verify4-1.sh",
                         "hint": "Please execute `kubectl label nodes minikube org=labex` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify4-2.sh",
                         "hint": "Please execute `kubectl cordon -l org=labex` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify4-3.sh",
                         "hint": "Please execute `kubectl get node -l org=labex | grep SchedulingDisabled` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
                         "name": "Check if the command is executed",
                         "file": "verify4-4.sh",
                         "hint": "Please execute `kubectl uncordon -l org=labex` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     }
                 ],
