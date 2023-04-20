@@ -67,7 +67,7 @@
                     {
                         "name": "Check if the command is executed",
                         "file": "verify3-3.sh",
-                        "hint": "Please execute `kubectl apply -f /home/labex/project/deploy.yaml` command",
+                        "hint": "Please perform steps 2 and 3 again",
                         "timeout": 10,
                         "showstderr": false
                     },
