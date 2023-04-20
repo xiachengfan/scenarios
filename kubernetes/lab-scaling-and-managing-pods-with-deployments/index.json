@@ -96,7 +96,7 @@
         "verify": [
           {
             "name": "Check if the command is executed",
-            "file": "verify4-1.sh",
+            "file": "verify5.sh",
             "hint": "Please execute `kubectl delete deployment my-deployment` command",
             "timeout": 0,
             "showstderr": false
