@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cat ~/.zsh_history | grep kubectl |grep apply
-minikube kubectl -- describe deployments myapp-deployment 
+minikube kubectl -- describe deployments my-deployment 
