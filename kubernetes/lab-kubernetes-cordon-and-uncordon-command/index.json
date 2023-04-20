@@ -84,13 +84,6 @@
                         "hint": "Please execute `kubectl uncordon minikube` command",
                         "timeout": 10,
                         "showstderr": false
-                    },
-                    {
-                        "name": "Automatically execute after passing",
-                        "file": "verify3-5.sh",
-                        "hint": "Automatically execute after passing",
-                        "timeout": 10,
-                        "showstderr": false
                     }
                 ],
                 "skills": []
