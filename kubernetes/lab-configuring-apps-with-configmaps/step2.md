@@ -2,7 +2,7 @@
 
 In this step, you will use the ConfigMap in your application.
 
-Create a file named `/home/labex/project/deployment.yaml` with the following contents:
+Create a file named `deployment.yaml` in `/home/labex/project/` directory with the following contents:
 
 ```yaml
 apiVersion: apps/v1
@@ -35,5 +35,5 @@ This deployment specifies a single container running your application, which use
 To create the deployment, run the following command:
 
 ```bash
-kubectl apply -f /home/labex/project/deployment.yaml
+kubectl apply -f deployment.yaml
 ```
