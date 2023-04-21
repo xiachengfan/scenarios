@@ -86,7 +86,7 @@
                         "showstderr": false
                     }
                 ],
-                "skills": []
+                "skills": ["kubernetes/cordon"]
             },
             {
                 "title": "Please replace this text with the title of the step",
@@ -121,7 +121,7 @@
                         "showstderr": false
                     }
                 ],
-                "skills": []
+                "skills": ["kubernetes/cordon"]
             }
         ],
         "intro": {
