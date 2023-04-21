@@ -12,7 +12,7 @@
         "verify": [
           {
             "name": "Check if the command is executed",
-            "file": "verify3-1.sh",
+            "file": "verify1.sh",
             "hint": "Please execute `minikube addons enable metrics-server` command",
             "timeout": 0,
             "showstderr": false
@@ -28,7 +28,7 @@
         "verify": [
           {
             "name": "Check if the command is executed",
-            "file": "verify3-1.sh",
+            "file": "verify2.sh",
             "hint": "Please execute `kubectl top pods --namespace=kube-system` and  `kubectl top` nodes commands",
             "timeout": 0,
             "showstderr": false
