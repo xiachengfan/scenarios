@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cat ~/.zsh_history | grep kubectl |grep apply
+
+REPLICAS_DESIRED=3
 # 获取实际副本数
 REPLICAS_CURRENT=$(minikube kubectl -- get deployment my-deployment -o=jsonpath='{.spec.replicas}')
 

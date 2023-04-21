@@ -1,6 +1,6 @@
 # Create a Deployment
 
-1. Create a file called `/home/labex/project/my-deployment.yaml` with the following content:
+1. Create a file called `my-deployment.yaml` in `/home/labex/project/` with the following content::
 
 ```yaml
 apiVersion: apps/v1
@@ -29,7 +29,7 @@ This YAML file defines a Deployment with 3 replicas, running an Nginx container.
 2. Deploy the `my-deployment` Deployment:
 
 ```bash
-kubectl apply -f /home/labex/project/my-deployment.yaml
+kubectl apply -f my-deployment.yaml
 ```
 
 This will create the `my-deployment` Deployment and its associated ReplicaSets and Pods.
