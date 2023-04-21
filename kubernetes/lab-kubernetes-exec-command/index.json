@@ -60,7 +60,7 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": ["kubernetes/exec"]
       },
       {
         "title": "Executing a Command with Environment Variables",
@@ -81,7 +81,7 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": ["kubernetes/exec"]
       }
     ],
     "intro": {
