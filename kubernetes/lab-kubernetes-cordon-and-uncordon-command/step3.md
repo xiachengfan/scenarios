@@ -2,7 +2,13 @@ Cordoning and Uncordoning Nodes with Pods
 
 In this step, we will simulate a scenario where a node needs to be cordoned and uncordoned while it has pods running on it. Here are the steps:
 
-1. Create a deployment called `/home/labex/project/deploy.yaml` with multiple replicas using the following YAML file:
+1. Execute the following command to enter the directory `/home/labex/project/`:
+
+```bash
+cd /home/labex/project/
+```
+
+2. Create a deployment named "deploy.yaml" with multiple copies using the following YAML file in the directory `/home/labex/project/`:
 
 ```yaml
 # deploy.yaml
@@ -27,19 +33,19 @@ spec:
             - containerPort: 80
 ```
 
-2. Cordon the node using the following command:
+3. Cordon the node using the following command:
 
 ```bash
 kubectl cordon minikube
 ```
 
-3. Apply the YAML file using the following command:
+4. Apply the YAML file using the following command::
 
 ```bash
-kubectl apply -f /home/labex/project/deploy.yaml
+kubectl apply -f deploy.yaml
 ```
 
-4. List the pods running on the nodes using the following command:
+5. List the pods running on the nodes using the following command:
 
 ```bash
 kubectl get pods -o wide
@@ -47,13 +53,13 @@ kubectl get pods -o wide
 
 Check if the Pod is scheduled and started properly.
 
-5. Uncordon the node using the following command:
+6. Uncordon the node using the following command:
 
 ```bash
 kubectl uncordon minikube
 ```
 
-6. Check the status of the pods running on the node to ensure that they are rescheduled on the uncordoned node using the following command:
+7. Check the status of the pods running on the node to ensure that they are rescheduled on the uncordoned node using the following command:
 
 ```bash
 kubectl get pods -o wide
