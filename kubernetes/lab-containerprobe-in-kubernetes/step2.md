@@ -2,7 +2,7 @@
 
 The next step is to add a liveness probe to the nginx container. A liveness probe is used to determine if the container is alive. If the probe fails, Kubernetes will restart the container.
 
-1. Update the `deployment.yaml` with the follow content:
+1. Update the `deployment.yaml` in the `/home/labex/project` directory with the follow content:
 
 ```yaml
 apiVersion: apps/v1

@@ -2,7 +2,7 @@
 
 The first step is to create a deployment in Kubernetes. We will use this deployment to test the ContainerProbe.
 
-1. Create a new file named `deployment.yaml`.
+1. Create a new file named `deployment.yaml` in the `/home/labex/project` directory.
 2. Copy and paste the following code into the file:
 
 ```yaml

@@ -2,7 +2,7 @@
 
 The next step is to add a readiness probe to the nginx container. A readiness probe is used to determine if the container is ready to accept traffic. If the probe fails, Kubernetes will not send traffic to the container.
 
-1. Add the following code to the container definition in `deployment.yaml`
+1. Add the following code to the container definition in `deployment.yaml`:
 
 ```yaml
 apiVersion: apps/v1
