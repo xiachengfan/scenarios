@@ -1,6 +1,5 @@
 #!/bin/bash
 
-minikube kubectl -- describe daemonset myapp-daemonset |grep busybox
-cat ~/.zsh_history | grep kubectl | |grep pod|grep app=myapp 
-sudo test -f /home/labex/myapp-daemonset-update.yaml
-minikube start
+POD_NAME=$(kubectl get pods -o jsonpath='{.items[*].metadata.name}')
+minikube kubectl -- logs $POD_NAME | grep "19080"
+minikube kubectl -- logs $POD_NAME | grep "19443"
