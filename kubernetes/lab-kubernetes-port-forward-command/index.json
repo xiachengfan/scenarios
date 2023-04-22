@@ -50,7 +50,7 @@
           },
           {
             "name": "Check whether to punch in the browser to access",
-            "file": "verify4-3.sh",
+            "file": "verify2-3.sh",
             "hint": "Please open your browser to access port 19080 and 19443",
             "timeout": 0,
             "showstderr": false
@@ -80,7 +80,7 @@
           },
           {
             "name": "Check whether to punch in the browser to access",
-            "file": "verify4-3.sh",
+            "file": "verify3-3.sh",
             "hint": "Please open your browser to access port 19001",
             "timeout": 0,
             "showstderr": false
@@ -103,7 +103,7 @@
           },
           {
             "name": "Check if the command is executed",
-            "file": "verify4-1.sh",
+            "file": "verify4-2.sh",
             "hint": "Please execute `kubectl port-forward service/nginx 20000:80` command",
             "timeout": 0,
             "showstderr": false
