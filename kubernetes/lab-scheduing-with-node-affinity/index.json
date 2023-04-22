@@ -1,0 +1,183 @@
+{
+  "type": "lab",
+  "title": "Scheduing with Node Affinity",
+  "description": "Node Affinity is a feature in Kubernetes that schedules Pods to specific nodes based on their attributes. It improves scheduling efficiency and can be required or preferred.",
+  "difficulty": "Beginner",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Creating a Node with Labels",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify1-1.sh",
+            "hint": "Please create a yaml file named node-with-label.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify1-2.sh",
+            "hint": "Please execute `kubectl apply -f kubectl apply -f node-with-label.yaml` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify1-3.sh",
+            "hint": "Please execute `kubectl get nodes --show-labels` command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/apply",
+          "kubernetes/get"
+        ]
+      },
+      {
+        "title": "Creating a Pod with Node Affinity",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify2-1.sh",
+            "hint": "Please create a yaml file named pod-with-node-affinity.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify2-2.sh",
+            "hint": "Please execute `kubectl apply -f pod-with-node-affinity.yaml` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify2-3.sh",
+            "hint": "Please execute `kubectl get pod pod-with-node-affinity -o wide` command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "Please copy the skill ID from the official skill tree"
+        ]
+      },
+      {
+        "title": "Creating a Pod with Node Anti-Affinity",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify3-1.sh",
+            "hint": "Please create a yaml file named pod-with-node-anti-affinity.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify3-2.sh",
+            "hint": "Please execute `kubectl apply -f pod-with-node-anti-affinity.yaml` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify3-3.sh",
+            "hint": "Please execute `kubectl get pod pod-with-node-anti-affinity -o wide` command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/apply",
+          "kubernetes/get"
+        ]
+      },
+      {
+        "title": "Creating a Pod with Node Affinity and Node Selector",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify4-1.sh",
+            "hint": "Please create a yaml file named pod-with-node-affinity-and-selector.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify4-2.sh",
+            "hint": "Please execute `kubectl apply -f pod-with-node-affinity-and-selector.yaml` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify4-3.sh",
+            "hint": "Please execute `kubectl get pod pod-with-node-affinity-and-selector -o wide` command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/apply",
+          "kubernetes/get"
+        ]
+      },
+      {
+        "title": "Creating a Pod with Multiple Node Affinity Rules",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify5-1.sh",
+            "hint": "Please create a yaml file named pod-with-multiple-node-affinity.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify5-2.sh",
+            "hint": "Please execute `kubectl apply -f pod-with-multiple-node-affinity.yaml` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify5-3.sh",
+            "hint": "Please execute `kubectl get pod pod-with-multiple-node-affinity -o wide` command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/apply",
+          "kubernetes/get"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}
