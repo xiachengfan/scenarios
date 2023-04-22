@@ -50,7 +50,7 @@
           },
           {
             "name": "Check whether to punch in the browser to access",
-            "file": "verify2-3.sh",
+            "file": "verify2-2.sh",
             "hint": "Please open your browser to access port 19080 and 19443",
             "timeout": 0,
             "showstderr": false
