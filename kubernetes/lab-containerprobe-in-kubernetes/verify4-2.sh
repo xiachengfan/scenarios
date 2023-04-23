@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# cat ~/.zsh_history | grep kubectl |grep apply;then 
 
-if minikube kubectl -- describe deployment containerprobe-deployment |grep -q "Readiness";then
+if cat ~/.zsh_history | grep kubectl |grep apply > /dev/null&& minikube kubectl -- describe deployment containerprobe-deployment |grep -q "Readiness";then
   history -c
   exit 0
 else
