@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo test -f /home/labex/project/deployment.yaml.yaml
+sudo test -f /home/labex/project/deployment.yaml
 

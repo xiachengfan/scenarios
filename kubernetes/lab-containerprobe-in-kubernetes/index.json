@@ -13,7 +13,7 @@
           {
             "name": "Check if the yaml file exists.",
             "file": "verify1-1.sh",
-            "hint": "Please create a yaml file named deployment.yaml in the `/home/labex/project directory",
+            "hint": "Please create a yaml file named deployment.yaml in the `/home/labex/project` directory",
             "timeout": 10,
             "showstderr": false
           },
@@ -38,7 +38,7 @@
           {
             "name": "Check if this yaml file is updated.",
             "file": "verify2-1.sh",
-            "hint": "Please updated a yaml file named deployment.yaml in the `/home/labex/project directory",
+            "hint": "Please updated a yaml file named deployment.yaml in the `/home/labex/project` directory",
             "timeout": 10,
             "showstderr": false
           },
