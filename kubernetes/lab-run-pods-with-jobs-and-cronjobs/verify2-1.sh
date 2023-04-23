@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo test -f /home/labex/project/multi-pod-job.yaml.yaml
+sudo test -f /home/labex/project/multi-pod-job.yaml

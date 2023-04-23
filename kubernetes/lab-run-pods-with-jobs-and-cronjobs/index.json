@@ -27,7 +27,7 @@
                     {
                         "name": "Check if the command is executed",
                         "file": "verify1-3.sh",
-                        "hint": "Please execute `kubectl get cronjobs` command",
+                        "hint": "Please execute `kubectl get jobs` command",
                         "timeout": 0,
                         "showstderr": false
                     },
@@ -52,7 +52,7 @@
                     {
                         "name": "Check if the yaml file exists.",
                         "file": "verify2-1.sh",
-                        "hint": "Please create a yaml file named myapp-daemonset.yaml in the `/home/labelx/project` directory",
+                        "hint": "Please create a yaml file named multi-pod-job.yaml in the `/home/labelx/project` directory",
                         "timeout": 10,
                         "showstderr": false
                     },
@@ -91,7 +91,7 @@
                     {
                         "name": "Check if the yaml file exists.",
                         "file": "verify3-1.sh",
-                        "hint": "Please create a yaml file named myapp-daemonset.yaml in the `/home/labelx/project` directory",
+                        "hint": "Please create a yaml file named cronjob.yaml in the `/home/labelx/project` directory",
                         "timeout": 10,
                         "showstderr": false
                     },
@@ -105,7 +105,7 @@
                     {
                         "name": "Check if the command is executed",
                         "file": "verify3-3.sh",
-                        "hint": "Please execute `kubectl get jobs` command",
+                        "hint": "Please execute `kubectl get cronjobs` command",
                         "timeout": 0,
                         "showstderr": false
                     },
