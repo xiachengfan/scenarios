@@ -40,6 +40,6 @@ Once the job is completed, you can view the logs of the pod by running the follo
 kubectl logs <POD_NAME>
 ```
 
-Replace `<POD_NAME>` with the name of the pod that ran the job,and you can get the `<pod_name>` with the `kubectl get pod -l hello-job` command.
+Replace `<POD_NAME>` with the name of the pod that ran the job,and you can get the `<pod_name>` with the `kubectl get pods |grep  hello-job` command.
 
 Congratulations, you have successfully run a pod with a job in Kubernetes!

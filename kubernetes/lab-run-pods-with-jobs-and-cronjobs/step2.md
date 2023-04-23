@@ -48,6 +48,6 @@ Once the job is completed, you can view the logs of the pod by running the follo
 kubectl logs <POD_NAME>
 ```
 
-Replace `<POD_NAME>` with the name of any pod that ran the job. You can see the download log of the file,and you can get the `<pod_name>` with the `kubectl get pod -l download-job` command.
+Replace `<POD_NAME>` with the name of any pod that ran the job. You can see the download log of the file,and you can get the `<pod_name>` with the `kubectl get pod |grep download-job` command.
 
 Congratulations, you have successfully run a job with multiple pods in Kubernetes!

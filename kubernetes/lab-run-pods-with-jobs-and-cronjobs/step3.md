@@ -44,6 +44,6 @@ Once the cronjob is running, you can view the logs of the pod by running the fol
 kubectl logs -f <POD_NAME>
 ```
 
-Replace `<POD_NAME>` with the name of any pod that was created by the cronjob,and you can get the `<pod_name>` with the `kubectl get pod -l hello-cronjob` command.
+Replace `<POD_NAME>` with the name of any pod that was created by the cronjob,and you can get the `<pod_name>` with the `kubectl get pod |grep  hello-cronjob` command.
 
 Congratulations, you have successfully run a cronjob in Kubernetes!
