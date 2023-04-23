@@ -5,7 +5,7 @@ In addition to one-off jobs, Kubernetes also supports cronjobs for running tasks
 Create a file named `cronjob.yaml` in `/home/labex/project/` with the following contents:
 
 ```yaml
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: hello-cronjob
@@ -44,6 +44,6 @@ Once the cronjob is running, you can view the logs of the pod by running the fol
 kubectl logs -f <POD_NAME>
 ```
 
-Replace `<POD_NAME>` with the name of any pod that was created by the cronjob.
+Replace `<POD_NAME>` with the name of any pod that was created by the cronjob,and you can get the `<pod_name>` with the `kubectl get pod -l hello-cronjob` command.
 
 Congratulations, you have successfully run a cronjob in Kubernetes!
