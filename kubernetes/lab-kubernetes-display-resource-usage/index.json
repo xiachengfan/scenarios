@@ -12,8 +12,15 @@
         "verify": [
           {
             "name": "Check if the command is executed",
-            "file": "verify1.sh",
+            "file": "verify1-1.sh",
             "hint": "Please execute `minikube addons enable metrics-server` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Need to wait for the metrics-server status to be running.",
+            "file": "verify1-2.sh",
+            "hint": "Please execute `kubectl get pods --namespace=kube-system |grep metrics-server` nodes commands",
             "timeout": 0,
             "showstderr": false
           }
@@ -27,9 +34,16 @@
         "text": "step2.md",
         "verify": [
           {
+            "name": "Need to wait for the metrics-server status to be running.",
+            "file": "verify2-1.sh",
+            "hint": "Please execute `kubectl get pods --namespace=kube-system |grep metrics-server` nodes commands",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
             "name": "Check if the command is executed",
-            "file": "verify2.sh",
-            "hint": "Please execute `kubectl top pods --namespace=kube-system` and  `kubectl top` nodes commands",
+            "file": "verify2-2.sh",
+            "hint": "Please execute `kubectl top pods --namespace=kube-system` and `kubectl top` nodes commands",
             "timeout": 0,
             "showstderr": false
           }
@@ -43,6 +57,13 @@
         "text": "step3.md",
         "verify": [
           {
+            "name": "Need to wait for the metrics-server status to be running.",
+            "file": "verify2-1.sh",
+            "hint": "Please execute `kubectl get pods --namespace=kube-system |grep metrics-server` nodes commands",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
             "name": "Check if the yaml file exists.",
             "file": "verify3-1.sh",
             "hint": "Please create a yaml file named myapp-pod.yaml in the `/home/labex/project` directory",
@@ -55,7 +76,8 @@
             "hint": "Please create the Pod via the YAML file in step 1.",
             "timeout": 10,
             "showstderr": false
-          },          {
+          },
+          {
             "name": "Check if the command is executed",
             "file": "verify3-3.sh",
             "hint": "Please execute `kubectl top pod myapp-pod --namespace=default --containers=true` command",

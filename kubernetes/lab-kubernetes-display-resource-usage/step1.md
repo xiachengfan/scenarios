@@ -7,3 +7,9 @@ minikube addons enable metrics-server
 ```
 
 This command will enable the metrics-server in your Kubernetes cluster.
+
+Execute the following command to check whether the metrics-server is running:
+
+```bash
+kubectl get pods --namespace=kube-system |grep metrics-server 
+```
