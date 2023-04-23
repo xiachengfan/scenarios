@@ -25,14 +25,14 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the command is executed",
+                        "name": "Check if the `kubectl get jobs` command is executed",
                         "file": "verify1-3.sh",
                         "hint": "Please execute `kubectl get jobs` command",
                         "timeout": 0,
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the command is executed",
+                        "name": "Check if the `kubectl logs <POD_NAME>` command is executed",
                         "file": "verify1-4.sh",
                         "hint": "Please execute `kubectl logs <POD_NAME>` command",
                         "timeout": 0,
@@ -64,17 +64,17 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the command is executed",
+                        "name": "Check if the `kubectl get jobs` command is executed",
                         "file": "verify2-3.sh",
                         "hint": "Please execute `kubectl get jobs` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the command is executed",
+                        "name": "Check if the `kubectl logs <POD_NAME>` command is executed",
                         "file": "verify2-4.sh",
                         "hint": "Please execute `kubectl logs <POD_NAME>` command",
-                        "timeout": 0,
+                        "timeout": 10,
                         "showstderr": false
                     }
                 ],
@@ -103,14 +103,14 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the command is executed",
+                        "name": "Check if the `kubectl get cronjobs` command is executed",
                         "file": "verify3-3.sh",
                         "hint": "Please execute `kubectl get cronjobs` command",
                         "timeout": 0,
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the command is executed",
+                        "name": "Check if the `kubectl logs <POD_NAME>`command is executed",
                         "file": "verify3-4.sh",
                         "hint": "Please execute `kubectl logs <POD_NAME>` command",
                         "timeout": 0,
