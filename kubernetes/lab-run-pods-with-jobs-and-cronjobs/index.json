@@ -25,9 +25,9 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the `kubectl get jobs` command is executed",
+                        "name": "Check if the `kubectl get job` command is executed",
                         "file": "verify1-3.sh",
-                        "hint": "Please execute `kubectl get jobs` command",
+                        "hint": "Please execute `kubectl get job` command",
                         "timeout": 10,
                         "showstderr": false
                     },
@@ -64,9 +64,9 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the `kubectl get jobs` command is executed",
+                        "name": "Check if the `kubectl get job` command is executed",
                         "file": "verify2-3.sh",
-                        "hint": "Please execute `kubectl get jobs` command",
+                        "hint": "Please execute `kubectl get job` command",
                         "timeout": 10,
                         "showstderr": false
                     },
@@ -103,9 +103,9 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the `kubectl get cronjobs` command is executed",
+                        "name": "Check if the `kubectl get cronjob` command is executed",
                         "file": "verify3-3.sh",
-                        "hint": "Please execute `kubectl get cronjobs` command",
+                        "hint": "Please execute `kubectl get cronjob` command",
                         "timeout": 10,
                         "showstderr": false
                     },
