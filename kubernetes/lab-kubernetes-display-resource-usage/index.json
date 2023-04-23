@@ -43,7 +43,7 @@
           {
             "name": "Check if the command is executed",
             "file": "verify2-2.sh",
-            "hint": "Please execute `kubectl top pods --namespace=kube-system` and `kubectl top` nodes commands",
+            "hint": "Please execute `kubectl top pods --namespace=kube-system` and `kubectl top` nodes commands and get the correct result.",
             "timeout": 0,
             "showstderr": false
           }
