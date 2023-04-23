@@ -64,13 +64,6 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the `kubectl get job` command is executed",
-                        "file": "verify2-3.sh",
-                        "hint": "Please execute `kubectl get job` command",
-                        "timeout": 10,
-                        "showstderr": false
-                    },
-                    {
                         "name": "Check if the `kubectl logs <POD_NAME>` command is executed",
                         "file": "verify2-4.sh",
                         "hint": "Please execute `kubectl logs <POD_NAME>` command",
