@@ -96,9 +96,9 @@
                         "showstderr": false
                     },
                     {
-                        "name": "Check if the `kubectl get cronjob` command is executed",
+                        "name": "Check if the `kubectl get cronjobs` command is executed",
                         "file": "verify3-3.sh",
-                        "hint": "Please execute `kubectl get cronjob` command",
+                        "hint": "Please execute `kubectl get cronjobs` command",
                         "timeout": 10,
                         "showstderr": false
                     },
