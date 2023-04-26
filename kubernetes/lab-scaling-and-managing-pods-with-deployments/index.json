@@ -89,7 +89,9 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": [
+          "kubernetes/rollout"
+        ]
       },
       {
         "title": "Clean Up",
