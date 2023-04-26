@@ -48,7 +48,9 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": [
+          "kubernetes/apply"
+        ]
       },
       {
         "title": "Verify the Configuration",
@@ -93,7 +95,9 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": [
+          "kubernetes/apply"
+        ]
       },
       {
         "title": "Verify the Update",
