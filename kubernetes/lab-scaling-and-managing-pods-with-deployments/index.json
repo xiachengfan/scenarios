@@ -34,11 +34,7 @@
         ],
         "skills": [
           "kubernetes/apply",
-          "kubernetes/get",
-          "kubernetes/edit",
-          "kubernetes/scale",
-          "kubernetes/rollout",
-          "kubernetes/delete"
+          "kubernetes/get"
         ]
       },
       {
@@ -53,7 +49,9 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": [
+          "kubernetes/scale"
+        ]
       },
       {
         "title": "Update the Deployment",
@@ -74,7 +72,10 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": [
+          "kubernetes/edit",
+          "kubernetes/rollout"
+        ]
       },
       {
         "title": "Roll Back the Deployment",
@@ -102,7 +103,9 @@
             "showstderr": false
           }
         ],
-        "skills": []
+        "skills": [
+          "kubernetes/delete"
+        ]
       }
     ],
     "intro": {
