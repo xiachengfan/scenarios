@@ -78,9 +78,9 @@
             "showstderr": false
           },
           {
-            "name": "Check if the command is executed",
+            "name": "Check if the command is executed and the resource usage of the pod",
             "file": "verify3-3.sh",
-            "hint": "Please execute `kubectl top pod myapp-pod --namespace=default --containers=true` command",
+            "hint": "Please execute `kubectl top pod myapp-pod --namespace=default --containers=true` command and returns the resource usage of the pod",
             "timeout": 0,
             "showstderr": false
           }
