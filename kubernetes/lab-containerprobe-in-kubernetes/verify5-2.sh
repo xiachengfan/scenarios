@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cat ~/.zsh_history | grep kubectl |grep describe|grep pod |grep containerprobe-deployment
+pod_name=$(kubectl get pods -l app=containerprobe -o jsonpath='{.items[0].metadata.name}')
+cat ~/.zsh_history | grep kubectl |grep describe|grep pod |grep ${pod_name}

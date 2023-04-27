@@ -110,13 +110,6 @@
         "verify": [
           {
             "name": "Check if the command is executed",
-            "file": "verify5-1.sh",
-            "hint": "Please execute `kubectl get pods -l app=containerprobe -o jsonpath='{.items[0].metadata.name}'` command",
-            "timeout": 0,
-            "showstderr": false
-          },
-          {
-            "name": "Check if the command is executed",
             "file": "verify5-2.sh",
             "hint": "Please execute `kubectl describe pod <pod-name>` command",
             "timeout": 0,
