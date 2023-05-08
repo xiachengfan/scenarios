@@ -31,7 +31,7 @@ In this step, you will learn how to forward a local port to a specific container
 3. Use the `kubectl port-forward` command to forward a local port to the Nginx container:
 
    ```bash
-   kubectl port-forward nginx-busybox 19001:80 -c nginx
+   kubectl port-forward nginx-busybox 19001:80 
    ```
 
 4. Open a web browser and go to `http://localhost:19001` to view the Nginx welcome page.
