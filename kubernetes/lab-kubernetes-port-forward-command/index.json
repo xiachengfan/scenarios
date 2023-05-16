@@ -33,8 +33,7 @@
           }
         ],
         "skills": [
-          "kubernetes/port_forward",
-          "kubernetes/create"
+          "kubernetes/port_forward"
         ]
       },
       {
