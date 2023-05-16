@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo test -f /home/labex/project/node-with-label.yaml
+sudo test -f /home/labex/node-with-label.yaml
 

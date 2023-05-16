@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo test -f /home/labex/project/pod-with-node-affinity.yaml
+sudo test -f /home/labex/pod-with-node-affinity.yaml
 
