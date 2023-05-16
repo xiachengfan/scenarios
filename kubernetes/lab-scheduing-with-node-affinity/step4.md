@@ -32,7 +32,7 @@ spec:
 kubectl apply -f pod-with-node-affinity-and-selector.yaml
 ```
 
-3. Verify that the pod is scheduled on the node with the `type=web` label:
+3. Verify that the pod is not scheduled on the node with the `type=web` label:
 
 ```bash
 kubectl get pod pod-with-node-affinity-and-selector -o wide
