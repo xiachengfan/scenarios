@@ -145,6 +145,10 @@ class Sync:
                 lab_direction = "NumPy"
             elif lab_direction == "Opencv":
                 lab_direction = "OpenCV"
+            elif lab_direction == "Css":
+                lab_direction = "CSS"
+            elif lab_direction == "Html":
+                lab_direction = "HTML"
         else:
             lab_direction = None
         lab_title = index.get("title", None)
