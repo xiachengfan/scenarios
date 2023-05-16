@@ -1,0 +1,105 @@
+{
+  "type": "challenge",
+  "title": "Map the Container Ports",
+  "description": "In this challenge, you will learn how to use the docker port command and the docker run command to manage ports in Docker step-by-step.",
+  "difficulty": "Beginner",
+  "time": 25,
+  "details": {
+    "steps": [
+      {
+        "title": "Start a Container",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the my-nginx container start.",
+            "file": "verify1.sh",
+            "hint": "Please Start a Container named my-nginx.",
+            "timeout": 10,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "List the Public-Facing Ports of a Container",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if the container ports are listed.",
+            "file": "verify2.sh",
+            "hint": "Please List the Public-Facing Ports of the Container",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/inspect"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Map a Port to a Specific IP Address",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Verify that the port is mapped to the IP address",
+            "file": "verify3.sh",
+            "hint": "Please Map port 8080 to IP address 0.0.0.0 .",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Map a Port to a Random Port",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Verify that the port is mapped to the port",
+            "file": "verify4.sh",
+            "hint": "Please Mapping ports to random ports of containers",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run"],
+        "solutions": ["step4-solution.md"]
+      },
+      {
+        "title": "Map Multiple Ports",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Verify that port 8080 is mapped to port 80",
+            "file": "verify5.sh",
+            "hint": "Please Map port 8080 to port 80 and port 8443 to port 443",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+
+        "skills": ["docker/run"],
+        "solutions": ["step5-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}
