@@ -2,7 +2,7 @@
 
 In this step, we will create a pod with a node anti-affinity rule that will ensure it is not scheduled on a node with a specific label.
 
-1. Create a file named `pod-with-node-anti-affinity.yaml` with the following contents:
+1. Create a file named `pod-with-node-anti-affinity.yaml` with the following contents in the `/home/labex` directory:
 
 ```yaml
 apiVersion: v1

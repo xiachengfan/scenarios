@@ -13,7 +13,7 @@
           {
             "name": "Check if the yaml file exists.",
             "file": "verify1-1.sh",
-            "hint": "Please create a yaml file named node-with-label.yaml in the `/home/labex/project` directory",
+            "hint": "Please create a yaml file named node-with-label.yaml in the `/home/labex` directory",
             "timeout": 10,
             "showstderr": false
           },

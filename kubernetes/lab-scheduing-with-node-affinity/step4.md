@@ -2,7 +2,7 @@
 
 In this step, we will create a pod with both a node affinity rule and a node selector that will ensure it is scheduled on a node with a specific label.
 
-1. Create a file named `pod-with-node-affinity-and-selector.yaml` with the following contents:
+1. Create a file named `pod-with-node-affinity-and-selector.yaml` with the following contents in the `/home/labex` directory:
 
 ```yaml
 apiVersion: v1

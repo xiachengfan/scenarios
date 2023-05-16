@@ -2,7 +2,7 @@
 
 In this step, we will create a pod with multiple node affinity rules that will ensure it is scheduled on a node with labels that match all of the rules.
 
-1. Create a file named `pod-with-multiple-node-affinity.yaml` with the following contents:
+1. Create a file named `pod-with-multiple-node-affinity.yaml` with the following contents in the `/home/labex` directory:
 
 ```yaml
 apiVersion: v1

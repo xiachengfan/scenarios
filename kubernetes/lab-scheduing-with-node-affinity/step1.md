@@ -2,7 +2,7 @@
 
 In this step, we will create a node with a label that will be used to schedule pods.
 
-1. Create a file named `node-with-label.yaml` with the following contents:
+1. Create a file named `node-with-label.yaml` with the following contents in the `/home/labex` directory:
 
 ```yaml
 apiVersion: v1
