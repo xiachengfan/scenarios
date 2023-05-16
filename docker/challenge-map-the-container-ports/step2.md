@@ -20,4 +20,3 @@ Here is an example of what you should be able to accomplish at the end of this s
 ## Requirements
 
 - The container must be running.
-

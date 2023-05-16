@@ -16,8 +16,3 @@ Here is an example of what you should be able to accomplish at the end of this s
 2. Map port `8080` to port `80` and port `8443` to port `443` for the `my-nginx4` container.
 
 ![challenge-map-the-container-ports-5](assets/challenge-map-the-container-ports-5.png)
-
-
-
-      
-

@@ -16,5 +16,3 @@ Here is an example of what you should be able to accomplish at the end of this s
 2. Map port `8080` to a random port for the `my-nginx3` container.
 
 ![challenge-map-the-container-ports-4](assets/challenge-map-the-container-ports-4.png)
-
-

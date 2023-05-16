@@ -16,5 +16,3 @@ Here is an example of what you should be able to accomplish at the end of this s
 2. Map port `8080` to IP address `0.0.0.0` for the `my-nginx2` container.
 
 ![challenge-map-the-container-ports-3](assets/challenge-map-the-container-ports-3.png)
-
-
