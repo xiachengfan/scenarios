@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat ~/.zsh_history | grep kubectl | |grep port-forward|grep service/nginx
+cat ~/.zsh_history | grep kubectl |grep port-forward|grep service/nginx
