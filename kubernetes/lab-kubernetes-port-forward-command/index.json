@@ -21,14 +21,14 @@
             "name": "Check if the command is executed",
             "file": "verify1-2.sh",
             "hint": "Please execute `kubectl port-forward <pod_name> 19000:80` command",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           },
           {
             "name": "Check whether to punch in the browser to access",
             "file": "verify1-3.sh",
             "hint": "Please open your browser to access port 19000",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           }
         ],
@@ -44,14 +44,14 @@
             "name": "Check if the command is executed",
             "file": "verify2-1.sh",
             "hint": "Please execute `kubectl port-forward <pod_name> 19080:80 19443:443` command",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           },
           {
             "name": "Check whether to punch in the browser to access",
             "file": "verify2-2.sh",
             "hint": "Please open your browser to access port 19080 and 19443",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           }
         ],
@@ -74,14 +74,14 @@
             "name": "Check if the command is executed",
             "file": "verify3-2.sh",
             "hint": "Please execute `kubectl port-forward nginx-busybox 19001:80 -c nginx` command",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           },
           {
             "name": "Check whether to punch in the browser to access",
             "file": "verify3-3.sh",
             "hint": "Please open your browser to access port 19001",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           }
         ],
@@ -97,21 +97,21 @@
             "name": "Check if the command is executed",
             "file": "verify4-1.sh",
             "hint": "Please execute `kubectl expose deployment nginx --port=80 --type=ClusterIP` command",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           },
           {
             "name": "Check if the command is executed",
             "file": "verify4-2.sh",
             "hint": "Please execute `kubectl port-forward service/nginx 20000:80` command",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           },
           {
             "name": "Check whether to punch in the browser to access",
             "file": "verify4-3.sh",
             "hint": "Please open your browser to access port 20000",
-            "timeout": 0,
+            "timeout": 10,
             "showstderr": false
           }
         ],
