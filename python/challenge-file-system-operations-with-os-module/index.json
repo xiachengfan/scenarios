@@ -1,0 +1,195 @@
+{
+  "type": "challenge",
+  "title": "File System Operations with Os Module",
+  "description": "Work with the `os` module to perform various complex tasks related to the file system.",
+  "difficulty": "Beginner",
+  "time": 25,
+  "details": {
+    "steps": [
+      {
+        "title": "Disk Space Analyzer",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Create a disk space analyzer.",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/os", "python/for_loop", "python/tuple"],
+        "solutions": ["disk_space_analyzer.py"]
+      },
+      {
+        "title": "Duplicate File Finder",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Create a duplicate file finder.",
+            "file": "verify2.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/os",
+          "python/for_loop",
+          "python/collections",
+          "python/dict",
+          "python/list",
+          "python/print",
+          "python/open"
+        ],
+        "solutions": ["duplicate_file_finder.py"]
+      },
+      {
+        "title": "File Extension Statistics",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Create a file extension statistics generator.",
+            "file": "verify3.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/os",
+          "python/for_loop",
+          "python/collections",
+          "python/dict",
+          "python/print"
+        ],
+        "solutions": ["file_extension_statistics.py"]
+      },
+      {
+        "title": "File Search Engine",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Create a file search engine.",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/os",
+          "python/for_loop",
+          "python/list",
+          "python/print"
+        ],
+        "solutions": ["file_search_engine.py"]
+      },
+      {
+        "title": "Batch File Renamer",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Create a batch file renamer.",
+            "file": "verify5.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/os",
+          "python/for_loop",
+          "python/list",
+          "python/tuple",
+          "python/print"
+        ],
+        "solutions": ["batch_file_renamer.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "disk_space_analyzer.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "disk_space_analyzer_example.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "disk_space_analyzer_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "duplicate_file_finder_example.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "duplicate_file_finder.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "duplicate_file_finder_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "file_extension_statistics_example.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "file_extension_statistics.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "file_extension_statistics_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "file_search_engine_example.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "file_search_engine.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "file_search_engine_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "batch_file_renamer_example.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "batch_file_renamer.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "batch_file_renamer_test.py",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

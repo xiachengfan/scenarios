@@ -1,0 +1,137 @@
+{
+  "type": "lab",
+  "title": "Docker Local Network",
+  "description": "In this lab, we will explore the three types of Docker network modes: Bridge, Host and None.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Docker Network Bridge",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if my-bridge-network network exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a docker network called my-bridge-network",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Launch two containers with my-bridge-network",
+            "file": "verify1-2.sh",
+            "hint": "Please run two containers based on alpine image",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the two containers are connected",
+            "file": "verify1-3.sh",
+            "hint": "Please use docker exec and ping command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the containers can access the host resources",
+            "file": "verify1-4.sh",
+            "hint": "Please use containers ping google.com",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network", "docker/run", "docker/exec"]
+      },
+      {
+        "title": "Docker Network Host",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Launch two containers",
+            "file": "verify2-1.sh",
+            "hint": "Please use the host network",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the two containers cannot communicate with each other",
+            "file": "verify2-2.sh",
+            "hint": "Please use docker exec and ping command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "View the IP addresses of container3 and container4",
+            "file": "verify2-3.sh",
+            "hint": "Please use 'docker inspect' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the containers can access the host resources",
+            "file": "verify2-4.sh",
+            "hint": "Please use containers ping google.com",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/network",
+          "docker/run",
+          "docker/inspect",
+          "docker/exec"
+        ]
+      },
+      {
+        "title": "Docker Network Host",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Launch a container without any network interface",
+            "file": "verify3-1.sh",
+            "hint": "Please use none network to run a container",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "View the IP addresses of container5",
+            "file": "verify3-2.sh",
+            "hint": "Please use 'docker inspect' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the container cannot communicate with the host machine",
+            "file": "verify3-3.sh",
+            "hint": "Please use container5 ping google.com",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/network",
+          "docker/run",
+          "docker/inspect",
+          "docker/exec"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

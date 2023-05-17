@@ -1,0 +1,140 @@
+{
+  "type": "challenge",
+  "title": "Lines and Circles Detection",
+  "description": "In this challenge summary, you will master the skills to implement detection of circles and straight lines using OpenCV-Python.",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Setup and Image Preparation",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Test the implement of read_and_preprocess_image function",
+            "file": "verify1.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "numpy/array",
+          "opencv/imread",
+          "opencv/cvt_color",
+          "opencv/gaussian_blur"
+        ],
+        "solutions": ["read_and_preprocess_image.py"]
+      },
+      {
+        "title": "Line Detection",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Test the implement of detect_lines function",
+            "file": "verify2.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["numpy/array", "opencv/canny", "opencv/hough_lines"],
+        "solutions": ["detect_lines.py"]
+      },
+      {
+        "title": "Circle Detection",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Test the implement of detect_circles function",
+            "file": "verify3.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["numpy/array", "opencv/hough_circles"],
+        "solutions": ["detect_circles.py"]
+      },
+      {
+        "title": "Combined Detection and Optimization",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Test the implement of draw_lines_and_circles function",
+            "file": "verify4.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["numpy/array", "opencv/line", "opencv/circle"],
+        "solutions": ["draw_lines_and_circles.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "read_and_preprocess_image.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "image_example.jpg",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "detect_lines.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "detect_circles.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "draw_lines_and_circles.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "test_read_and_preprocess_image.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "test_detect_lines.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "test_detect_circles.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "test_draw_lines_and_circles.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "image_test.jpg",
+          "target": "/tmp",
+          "chmod": "777"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

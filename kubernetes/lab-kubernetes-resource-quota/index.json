@@ -1,0 +1,127 @@
+{
+  "type": "lab",
+  "title": "Kubernetes ResourceQuota",
+  "description": "In this lab, you will learn how to use Kubernetes ResourceQuota to set limits on resource consumption in a Kubernetes cluster.",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Creating a ResourceQuota",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if example-resourcequota exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a ResourceQuota called example-resourcequota",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check the hard limit of This ResourceQuota",
+            "file": "verify1-2.sh",
+            "hint": "Please check the hard limits are cpu=1core and memory=1GiB",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the ResourceQuota has been created successfully",
+            "file": "verify1-3.sh",
+            "hint": "Please input 'kubectl describe resourcequota example-resourcequota'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/describe"]
+      },
+      {
+        "title": "Applying ResourceQuota to a Namespace",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if example-namespace exists",
+            "file": "verify2-1.sh",
+            "hint": "Please create a namespace called example-namespace",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Apply the ResourceQuota to the example-namespace namespace",
+            "file": "verify2-2.sh",
+            "hint": "Please input 'kubectl apply -f resourcequota.yaml -n example-namespace'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the ResourceQuota has been applied to the namespace",
+            "file": "verify2-3.sh",
+            "hint": "Please input 'kubectl describe namespace example-namespace'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/describe"]
+      },
+      {
+        "title": "Testing ResourceQuota Enforcement",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if pod-exceeding-limits.yaml exists",
+            "file": "verify3-1.sh",
+            "hint": "Please create pod-exceeding-limits.yaml",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Apply the pod-exceeding-limits.yaml file to your Kubernetes cluster",
+            "file": "verify3-2.sh",
+            "hint": "Please input 'kubectl apply -f pod-exceeding-limits.yaml'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      },
+      {
+        "title": "Modifying ResourceQuota",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check the hard limit of This ResourceQuota",
+            "file": "verify4-1.sh",
+            "hint": "Please check the hard limits are cpu=2cores and memory=2GiB",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the ResourceQuota has been updated",
+            "file": "verify4-2.sh",
+            "hint": "Please input 'kubectl describe resourcequotas example-resourcequota'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/describe"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

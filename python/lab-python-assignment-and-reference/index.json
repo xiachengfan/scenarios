@@ -1,0 +1,123 @@
+{
+  "type": "lab",
+  "title": "Python Assignment and Reference",
+  "description": "In this lab, you will learn how to assignment and reference in Python.",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction to Python Assignments",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if open the Python shell",
+            "file": "verify1-0.sh",
+            "hint": "Type Python3 in the terminal.",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check that the assignment operator is written correctly.",
+            "file": "verify1-1.sh",
+            "hint": "Please input = in the Python interpreter.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["python/variables", "python/assignment", "python/print"]
+      },
+      {
+        "title": "Understanding References",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if use the append function.",
+            "file": "verify2.sh",
+            "hint": "Please use the append function on variable y.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "python/variables",
+          "python/assignment",
+          "python/print",
+          "python/method_objects"
+        ]
+      },
+      {
+        "title": "Mutable and Immutable Objects",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if use the upper function.",
+            "file": "verify3.sh",
+            "hint": "Please use the upper function on variable another_mutable_list.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "python/variables",
+          "python/assignment",
+          "python/print",
+          "python/method_objects"
+        ]
+      },
+      {
+        "title": "Examples",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if import the copy module.",
+            "file": "verify4-0.sh",
+            "hint": "You need to import the copy module.",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if use the copy function in code.",
+            "file": "verify4-1.sh",
+            "hint": "You need to use the copy.copy to continue.",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if use the deepcopy function in code.",
+            "file": "verify4-2.sh",
+            "hint": "You need to use the copy.deepcopy to continue.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "python/variables",
+          "python/assignment",
+          "python/print",
+          "python/method_objects",
+          "python/function_basic",
+          "python/if_else"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

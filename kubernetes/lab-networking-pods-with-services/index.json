@@ -1,0 +1,113 @@
+{
+  "type": "lab",
+  "title": "Networking Pods with Services",
+  "description": "In this lab, you will learn how to network Pods with Services in Kubernetes",
+  "difficulty": "Beginner",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Pod",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if a Pod named `my-pod-1` exists.",
+            "file": "verify1.sh",
+            "hint": "Please follow the steps to complete the operation",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      },
+      {
+        "title": "Create a Service",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if a svc named `my-service` exists.",
+            "file": "verify2.sh",
+            "hint": "Please follow the steps to complete the operation",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      },
+      {
+        "title": "Test the Service",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if a Pod named `test-pod-1` exists.",
+            "file": "verify3-1.sh",
+            "hint": "Please follow the steps to complete the operation",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the service network is normal.",
+            "file": "verify3-2.sh",
+            "hint": "Please follow the steps to complete the operation",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/exec"]
+      },
+      {
+        "title": "Update the Service",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if there is a service target Pods with the label `app=busybox`.",
+            "file": "verify4.sh",
+            "hint": "Please follow the steps to complete the operation",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      },
+      {
+        "title": "Test the Updated Service",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Check if a Pod named `my-pod-2` exists.",
+            "file": "verify5-1.sh",
+            "hint": "Please follow the steps to complete the operation",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the service network is normal.",
+            "file": "verify5-2.sh",
+            "hint": "Please add label `app=busybox` to pod `my-pod-2`.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/delete", "kubernetes/run", "kubernetes/label"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

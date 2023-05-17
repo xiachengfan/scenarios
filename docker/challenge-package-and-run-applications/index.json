@@ -1,0 +1,151 @@
+{
+  "type": "challenge",
+  "title": "Package and Run Applications",
+  "description": "In this challenge, you will learn how to use Docker to package and run applications.",
+  "difficulty": "Intermediate",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Install and Run a Docker Image",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Run a container with tutum/hello-world image",
+            "file": "verify1.sh",
+            "hint": "Please use 'docker run' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Build a Docker Image",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if my-app directory exists",
+            "file": "verify2-1.sh",
+            "hint": "please create a directory called my-app in /home/labex/project/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if Dockerfile file exists",
+            "file": "verify2-2.sh",
+            "hint": "Please create a file called Dockerfile in /home/labex/project/my-app/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if requirements.txt file exists",
+            "file": "verify2-3.sh",
+            "hint": "Please create a file called requirements.txt in /home/labex/project/my-app/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if app.py file exists",
+            "file": "verify2-4.sh",
+            "hint": "Please create a file called app.py in /home/labex/project/my-app/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if my-app image exists",
+            "file": "verify2-5.sh",
+            "hint": "Please use 'docker build' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Run a container with my-app image",
+            "file": "verify2-6.sh",
+            "hint": "Please run a container with my-app image",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/build", "docker/run"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Store a Docker Image on Docker Hub",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Login Docker Hub",
+            "file": "verify3-1.sh",
+            "hint": "Please use 'docker login' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Tag the my-app image with your Docker Hub account",
+            "file": "verify3-2.sh",
+            "hint": "Please use 'docker tag' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Push the image with a tag to Docker Hub",
+            "file": "verify3-3.sh",
+            "hint": "Please use 'docker push' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Delete <your_username>/my-app image",
+            "file": "verify3-4.sh",
+            "hint": "Please use 'docker rmi' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Pull <your_username>/my-app image from Docker Hub",
+            "file": "verify3-5.sh",
+            "hint": "Please use 'docker pull' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Start a Docker container using the pulled image",
+            "file": "verify3-6.sh",
+            "hint": "Please use 'docker run' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "docker/login",
+          "docker/tag",
+          "docker/push",
+          "docker/rmi",
+          "docker/pull",
+          "docker/run"
+        ],
+        "solutions": ["step3-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

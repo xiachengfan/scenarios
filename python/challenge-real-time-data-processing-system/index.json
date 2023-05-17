@@ -1,0 +1,94 @@
+{
+  "type": "challenge",
+  "title": "Real-time Data Processing System",
+  "description": "In this challenge, you will create a program to simulate a real-time stock market data processing system.",
+  "difficulty": "Intermediate",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Stock Market Data Generator",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the generate_stock_data function is implemented",
+            "file": "verify1.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/threading", "python/random"],
+        "solutions": ["data_generator.py"]
+      },
+      {
+        "title": "Data Processor",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if the process_stock_data function is implemented",
+            "file": "verify2.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/multiprocessing"],
+        "solutions": ["data_processor.py"]
+      },
+      {
+        "title": "Main Function and Stopping Mechanism",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if the main function is implemented",
+            "file": "verify3.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/threading", "python/multiprocessing"],
+        "solutions": ["main_function.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "data_generator.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "data_processor.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "main_function.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "*_test.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "*_test_by_system.py",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

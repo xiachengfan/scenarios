@@ -1,0 +1,181 @@
+{
+  "type": "challenge",
+  "title": "Regular Expressions Mastery",
+  "description": "In this challenge, you will master the use of regular expressions.",
+  "difficulty": "Intermediate",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Web log analysis",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Please implement web_log_analysis.py correctly.",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/list",
+          "python/dict",
+          "python/with_statement",
+          "python/rw_files",
+          "python/re",
+          "python/collections"
+        ],
+        "solutions": ["web_log_analysis.py"]
+      },
+      {
+        "title": "Email obfuscation",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Please implement email_obfuscation.py correctly.",
+            "file": "verify2.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/list", "python/re"],
+        "solutions": ["email_obfuscation.py"]
+      },
+      {
+        "title": "Password validator",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Please implement password_validator.py correctly.",
+            "file": "verify3.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/list", "python/re"],
+        "solutions": ["password_validator.py"]
+      },
+      {
+        "title": "Extracting information from configuration file",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Please implement extracting_information.py correctly.",
+            "file": "verify4.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/dict", "python/re"],
+        "solutions": ["extracting_information.py"]
+      },
+      {
+        "title": "Counting occurrences of words in text file",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Please implement counting_occurrences.py correctly.",
+            "file": "verify5.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/dict",
+          "python/with_statement",
+          "python/rw_files",
+          "python/re"
+        ],
+        "solutions": ["counting_occurrences.py"]
+      },
+      {
+        "title": "Extracting URLs from web page",
+        "text": "step6.md",
+        "verify": [
+          {
+            "name": "Please implement extracting_url.py correctly.",
+            "file": "verify6.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/list", "python/re"],
+        "solutions": ["extracting_url.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "web_log_analysis.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "web_log_analysis_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "email_obfuscation.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "email_obfuscation_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "password_validator.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "password_validator_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "extracting_information.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "extracting_information_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "counting_occurrences.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "counting_occurrences_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "extracting_url.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "extracting_url_test.py",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "type": "challenge",
+  "title": "Manage Kubernetes Deployment",
+  "description": "In this challenge, you will learn how to scale and manage Pods with Deployments in Kubernetes.",
+  "difficulty": "Beginner",
+  "time": 25,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Deployment",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if my-deployment.yaml file exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a file called my-deployment.yaml at /home/labex/project/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if my-deployment deployment exists",
+            "file": "verify1-2.sh",
+            "hint": "Please use 'kubectl apply' command and check the YAML file",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the Deployment has been created",
+            "file": "verify1-3.sh",
+            "hint": "Please use 'kubectl get' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Scale the Deployment",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Scale up the my-deployment Deployment to 5 replicas",
+            "file": "verify2-1.sh",
+            "hint": "Please use 'kubectl scale' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the Deployment has been scaled.",
+            "file": "verify2-2.sh",
+            "hint": "Please use 'kubectl get' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/scale", "kubernetes/get"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Update the Deployment",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Change the image of the Deployment",
+            "file": "verify3-1.sh",
+            "hint": "Please edit the my-deployment Deployment to use the nginx:1.19 image",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the Deployment has been updated",
+            "file": "verify3-2.sh",
+            "hint": "Please use 'kubectl rollout status' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/edit", "kubernetes/rollout"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Rollback the Deployment",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Rollback the my-deployment Deployment to the previous version",
+            "file": "verify4-1.sh",
+            "hint": "Please use 'kubectl rollout undo' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the Deployment has been rolled back",
+            "file": "verify4-2.sh",
+            "hint": "Please use 'kubectl rollout status' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/rollout"],
+        "solutions": ["step4-solution.md"]
+      },
+      {
+        "title": "Clean up",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Delete the my-deployment Deployment",
+            "file": "verify5.sh",
+            "hint": "Please use 'kubectl delete' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/delete"],
+        "solutions": ["step5-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}
