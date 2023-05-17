@@ -1,7 +1,7 @@
 {
     "type": "lab",
     "title": "Scheduling with Pod Affinity",
-    "description": "",
+    "description": "Pod Affinity is a feature in Kubernetes that controls the relationship and scheduling between Pods. It can ensure that Pods are scheduled on the same node to achieve specific deployment requirements.",
     "difficulty": "Beginner",
     "time": 20,
     "details": {
