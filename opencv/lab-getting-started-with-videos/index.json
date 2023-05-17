@@ -1,0 +1,81 @@
+{
+  "type": "lab",
+  "title": "Getting Started with Videos",
+  "description": "In this lab, we'll be focusing on how to work with videos in OpenCV-Python.",
+  "difficulty": "Beginner",
+  "time": 10,
+  "details": {
+    "steps": [
+      {
+        "title": "Reading a Video and Saving a Frame",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Testing read_video.py",
+            "file": "verify1.sh",
+            "hint": "create a `VideoCapture` object by passing the path of the video file to be read, then read and save each frame",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "python/packages",
+          "opencv/video_capture",
+          "opencv/imread",
+          "opencv/imwrite",
+          "python/os",
+          "python/f_string"
+        ]
+      },
+      {
+        "title": "Writing and Saving a Video",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Testing write_video.py",
+            "file": "verify2.sh",
+            "hint": "write and save a video, you need to create a `VideoWriter` object and generate a video file called output.avi.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "python/packages",
+          "opencv/video_capture",
+          "opencv/fourcc",
+          "opencv/video_writer",
+          "python/int"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "video.mp4",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "read_video.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "write_video.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

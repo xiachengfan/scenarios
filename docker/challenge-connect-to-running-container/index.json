@@ -1,0 +1,121 @@
+{
+    "type": "challenge",
+    "title": "Connect to Running Container",
+    "description": "You will learn how to use the docker attach command to attach to a running container step-by-step.",
+    "difficulty": "Beginner",
+    "time": 20,
+    "details": {
+        "steps": [
+            {
+                "title": "Start a Container",
+                "text": "step1.md",
+                "verify": [
+                    {
+                        "name": "Check if my-nginx container exists",
+                        "file": "verify1.sh",
+                        "hint": "Please run a container called my-nginx with nginx image",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "docker/run"
+                ],
+                "solutions": [
+                    "step1-solution.md"
+                ]
+            },
+            {
+                "title": "Attach to a Running Container",
+                "text": "step2.md",
+                "verify": [
+                    {
+                        "name": "Attach to the my-nginx container",
+                        "file": "verify2.sh",
+                        "hint": "Please use docker attach command attach to my-nginx container",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "docker/attach"
+                ],
+                "solutions": [
+                    "step2-solution.md"
+                ]
+            },
+            {
+                "title": "Detach from a Running Container",
+                "text": "step3.md",
+                "verify": [
+                    {
+                        "name": "Check the my-nginx is running",
+                        "file": "verify3.sh",
+                        "hint": "Please check the my-nginx is running",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "docker/attach"
+                ],
+                "solutions": [
+                    "step3-solution.md"
+                ]
+            },
+            {
+                "title": "Attach to a Specific Process",
+                "text": "step4.md",
+                "verify": [
+                    {
+                        "name": "Restart the my-nginx container.",
+                        "file": "verify4-1.sh",
+                        "hint": "Please use docker restart command",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Get the my-nginx container ID",
+                        "file": "verify4-2.sh",
+                        "hint": "Please use docker ps command",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Attach to the nginx process inside the container",
+                        "file": "verify4-3.sh",
+                        "hint": "Please use docker exec command",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "docker/start",
+                    "docker/ps",
+                    "docker/exec"
+                ],
+                "solutions": [
+                    "step4-solution.md"
+                ]
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "background": "setup.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "",
+                    "target": "/tmp"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "webide-instance-ubuntu:2204"
+    }
+}

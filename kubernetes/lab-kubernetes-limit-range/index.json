@@ -1,0 +1,127 @@
+{
+  "type": "lab",
+  "title": "Kubernetes LimitRange",
+  "description": "In this lab, you will learn about Kubernetes LimitRange, which is used to set limits on resource consumption in Kubernetes pods.",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Creating a Simple LimitRange",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if LimitRange called example-limitrange exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a LimitRange called example-limitrange",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check the limits of this LimitRange",
+            "file": "verify1-2.sh",
+            "hint": "Please check the limits of this LimitRange",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the LimitRange has been created successfully",
+            "file": "verify1-3.sh",
+            "hint": "Please input 'kubectl describe limitrange example-limitrange'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/describe"]
+      },
+      {
+        "title": "Applying LimitRange to Pods",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if pod called example-pod exists",
+            "file": "verify2-1.sh",
+            "hint": "Please create a pod called example-pod",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the pod has been created successfully",
+            "file": "verify2-2.sh",
+            "hint": "Please input 'kubectl get pods example-pod'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check the resource limits applied to the pod",
+            "file": "verify2-3.sh",
+            "hint": "Please input 'kubectl describe pod example-pod'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get", "kubernetes/describe"]
+      },
+      {
+        "title": "Testing LimitRange Enforcement",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check the limits set in the LimitRange",
+            "file": "verify3-1.sh",
+            "hint": "Please check the limits set in the LimitRange (CPU: 2 cores, memory: 2 GiB)",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Apply the pod-exceeding-limits.yaml file to your Kubernetes cluster",
+            "file": "verify3-2.sh",
+            "hint": "Please input 'kubectl apply -f pod-exceeding-limits.yaml'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      },
+      {
+        "title": "Updating LimitRange",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Modify the limitrange.yaml file to update the resource limits",
+            "file": "verify4-1.sh",
+            "hint": "Please check the limit has been updated",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the LimitRange has been updated successfully",
+            "file": "verify4-2.sh",
+            "hint": "Please input 'kubectl describe limitranges example-limitrange'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/describe"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "type": "challenge",
+  "title": "File Copy for Containers",
+  "description": "You will learn how to use docker cp command to copy files and directories between your local machine and Docker containers.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Copying a File from Host to Container",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if my_container container exists",
+            "file": "verify1-1.sh",
+            "hint": "Please run a container called my_container with ubuntu:18.04 image",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if file.txt exists",
+            "file": "verify1-2.sh",
+            "hint": "Please create a file called file.txt in /home/labex path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Copying a file from host to container",
+            "file": "verify1-3.sh",
+            "hint": "Please use docker cp command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run", "docker/cp"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Copying a Directory from Container to Host",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if my_container2 container exists",
+            "file": "verify2-1.sh",
+            "hint": "Please run a container called my_container2 with ubuntu:18.04 image",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /tmp/labex/file1 and /tmp/labex/file2 exists in my_container2",
+            "file": "verify2-2.sh",
+            "hint": "Please create /tmp/labex/file1 and /tmp/labex/file2 files in my_container2",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Copying a directory from container to host",
+            "file": "verify2-3.sh",
+            "hint": "Please use docker cp command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run", "docker/exec", "docker/cp"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Copying a Directory from Host to Container",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if my_container3 container exists",
+            "file": "verify3-1.sh",
+            "hint": "Please run a container called my_container3 with ubuntu:18.04 image",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /tmp/labexx/file1 and /tmp/labexx/file2 exists in host",
+            "file": "verify3-2.sh",
+            "hint": "Please create /tmp/labexx/file1 and /tmp/labexx/file2 files in host",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Copying a directory from host to container",
+            "file": "verify3-3.sh",
+            "hint": "Please use docker cp command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run", "docker/cp"],
+        "solutions": ["step3-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "type": "challenge",
+  "title": "Deploy Containerized Applications",
+  "description": "You will learn how to containerize and deploy applications using Docker.",
+  "difficulty": "Intermediate",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Containerize a 'Hello, World!' Application",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if /home/labex/project/docker-hello-world directory exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a directory called docker-hello-world",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /home/labex/project/docker-hello-world/Dockerfile file exists",
+            "file": "verify1-2.sh",
+            "hint": "Please create a file called Dockerfile",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if hello-world image exists",
+            "file": "verify1-3.sh",
+            "hint": "Please use 'docker build' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Run a container with hello-world image",
+            "file": "verify1-4.sh",
+            "hint": "Please use 'docker run' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/build", "docker/run", "docker/images", "docker/ps"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Containerize a Python Application",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if /home/labex/project/docker-python directory exists",
+            "file": "verify2-1.sh",
+            "hint": "Please create a directory called docker-python",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /home/labex/project/docker-python/Dockerfile file exists",
+            "file": "verify2-2.sh",
+            "hint": "Please create a file called Dockerfile",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /home/labex/project/docker-python/app.py file exists",
+            "file": "verify2-3.sh",
+            "hint": "Please create a file called app.py",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if python-app image exists",
+            "file": "verify2-4.sh",
+            "hint": "Please use 'docker build' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Run a container with python-app image",
+            "file": "verify2-5.sh",
+            "hint": "Please use 'docker run' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/build", "docker/run", "docker/images", "docker/ps"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Persist Data Using Docker Volumes",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if /home/labex/project/docker-volume directory exists",
+            "file": "verify3-1.sh",
+            "hint": "Please create a directory called docker-volume",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /home/labex/project/docker-volume/Dockerfile file exists",
+            "file": "verify3-2.sh",
+            "hint": "Please create a file called Dockerfile",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if /home/labex/project/docker-volume/app.py file exists",
+            "file": "verify3-3.sh",
+            "hint": "Please create a file called app.py",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if python-volume image exists",
+            "file": "verify3-4.sh",
+            "hint": "Please use 'docker build' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Run a container with python-volume image",
+            "file": "verify3-5.sh",
+            "hint": "Please use 'docker run' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Validate the Docker volume to persist the data",
+            "file": "verify3-6.sh",
+            "hint": "Please use cat command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/build", "docker/run", "docker/images", "docker/ps"],
+        "solutions": ["step3-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

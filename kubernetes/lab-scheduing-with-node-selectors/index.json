@@ -1,0 +1,106 @@
+{
+  "type": "lab",
+  "title": "Scheduing with Node Selectors",
+  "description": "In this lab, we will learn how to schedule pods on specific nodes using Node Selectors and Node Affinity.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Creating a Simple Deployment",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if deployment called simple-deployment exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a deployment called simple-deployment exists",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the deployment has been created",
+            "file": "verify1-2.sh",
+            "hint": "Please input 'kubectl get deployments'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get"]
+      },
+      {
+        "title": "Assigning Node Selectors to a Deployment",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Create a label with the node minikube",
+            "file": "verify2-1.sh",
+            "hint": "Please input 'kubectl label nodes minikube disk=ssd'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if selector-deployment exists",
+            "file": "verify2-2.sh",
+            "hint": "Please create selector-deployment",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the pod has been scheduled on a node with the label disk=ssd",
+            "file": "verify2-3.sh",
+            "hint": "Please input 'kubectl get pods -o wide | grep selector-deployment'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get"]
+      },
+      {
+        "title": "Using Different Node Selectors",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Create three labels with the node minikube",
+            "file": "verify3-1.sh",
+            "hint": "Please input 'kubectl label nodes minikube resigon=labex' and 'kubectl label nodes minikube gpu=true'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if multi-selector-deployment exists",
+            "file": "verify3-2.sh",
+            "hint": "Please create multi-selector-deployment",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the pods have been scheduled on nodes with the appropriate labels",
+            "file": "verify3-3.sh",
+            "hint": "Please input 'kubectl get pods -o wide | grep multi-selector-deployment",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}
