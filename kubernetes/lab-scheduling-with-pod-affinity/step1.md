@@ -2,7 +2,7 @@
 
 In this step, we will create a pod with a label that we will use to demonstrate pod affinity.
 
-1. Create a file named `pod-with-label.yaml` with the following contents:
+1. Create a file named `pod-with-label.yaml` with the following contents in the `/home/labex` directory:
 
 ```yaml
 apiVersion: v1

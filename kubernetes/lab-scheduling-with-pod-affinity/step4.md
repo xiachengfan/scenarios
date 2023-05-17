@@ -2,7 +2,7 @@
 
 In this step, we will create a pod with both a node affinity rule and a pod affinity rule that will ensure it is scheduled on a node with a specific label and on the same node as the pod we created in step 1.
 
-1. Create a file named `pod-with-node-and-pod-affinity.yaml` with the following contents:
+1. Create a file named `pod-with-node-and-pod-affinity.yaml` with the following contents in the `/home/labex` directory:
 
 ```yaml
 apiVersion: v1
