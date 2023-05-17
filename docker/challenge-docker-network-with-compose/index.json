@@ -1,0 +1,130 @@
+{
+  "type": "challenge",
+  "title": "Docker Network with Compose",
+  "description": "In this challenge, you will learn how to create Docker networks, use a custom Docker network driver, and use Docker networks with Compose.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a simple Docker network",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if my-network exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a docker network called my-network",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the container is run with nginx image and my-network network",
+            "file": "verify1-2.sh",
+            "hint": "Please run a container called nginx-container",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the container is run with alpine image and my-network network",
+            "file": "verify1-3.sh",
+            "hint": "Please run a container called alpine-container",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the containers can communicate with each other",
+            "file": "verify1-4.sh",
+            "hint": "Please use 'docker exec' and 'ping' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network", "docker/run", "docker/exec"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Use a Docker network driver",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if my-network2 exists",
+            "file": "verify2-1.sh",
+            "hint": "Please create a network called my-network2 with bridge driver",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the container is run with alpine image and my-network2 network",
+            "file": "verify2-2.sh",
+            "hint": "Please run a container called alpine-container2",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the container is run with nginx image and my-network2 network",
+            "file": "verify2-3.sh",
+            "hint": "Please run a container called nginx-container2",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the containers can communicate with each other",
+            "file": "verify2-4.sh",
+            "hint": "Please use 'docker exec' and 'ping' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network", "docker/run", "docker/exec"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Please use 'docker exec' and 'ping' command",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if docker-compose.yml exists",
+            "file": "verify3-1.sh",
+            "hint": "Please create a file called docker-compose.yml",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if docker-compose exists",
+            "file": "verify3-2.sh",
+            "hint": "Please download docker-compose",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Run the containers",
+            "file": "verify3-3.sh",
+            "hint": "Please input 'docker-compose up'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network"],
+        "solutions": ["step3-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

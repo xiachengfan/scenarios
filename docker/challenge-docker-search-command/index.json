@@ -1,0 +1,81 @@
+{
+  "type": "challenge",
+  "title": "Docker Search Command",
+  "description": "In this challenge, you will learn how to use the docker search command.",
+  "difficulty": "Beginner",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Basic Search",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Test if the nginx image is searched.",
+            "file": "verify1.sh",
+            "hint": "Please use the 'docker search' command to search for nginx images.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/search"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Filtering Search Results",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Test if additional search criteria are specified in the search.",
+            "file": "verify2.sh",
+            "hint": "Please add the filter option when using the search command.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/search"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Displaying More Information",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Test if specific information is displayed during the search.",
+            "file": "verify3.sh",
+            "hint": "Please add the format option when using the search command.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/search"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Show Max Number of Search Results",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Test if the number of displays is limited during the search。",
+            "file": "verify4.sh",
+            "hint": "Please add the limit option when using the search command.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/search"],
+        "solutions": ["step4-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

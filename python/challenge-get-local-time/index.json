@@ -1,0 +1,49 @@
+{
+  "type": "challenge",
+  "title": "Get Local Time",
+  "description": "The program you will create will take as input the name of a city in the world and return the local time in that city. ",
+  "difficulty": "Intermediate",
+  "time": 5,
+  "details": {
+    "steps": [
+      {
+        "title": "Get Local Time",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Test the implementation of get_local_time",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/datetime", "python/pytz", "python/requests"],
+        "solutions": ["step1-solution.md", "get_local_time.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "get_local_time.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "*_test.py",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "type": "lab",
+  "title": "Containerprobe in Kubernetes",
+  "description": "In Kubernetes, container probes check if a container is running, ready to receive traffic, or has started up.",
+  "difficulty": "Intermediate",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Deployment",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify1-1.sh",
+            "hint": "Please create a yaml file named deployment.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the Deployment is created in the cluster.",
+            "file": "verify1-2.sh",
+            "hint": "Please updated the Deployment via the YAML file in step 1.",
+            "timeout": 10,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get", "kubernetes/describe"]
+      },
+      {
+        "title": "Add a Liveness Probe",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if this yaml file is updated.",
+            "file": "verify2-1.sh",
+            "hint": "Please updated a yaml file named deployment.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if this Deployment is updated in the cluster.",
+            "file": "verify2-2.sh",
+            "hint": "Please create the Deployment via the YAML file in step 2.",
+            "timeout": 10,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get", "kubernetes/describe"]
+      },
+      {
+        "title": "Test the Liveness Probe",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if the command is executed",
+            "file": "verify3-1.sh",
+            "hint": "Please execute `kubectl get pods -l app=containerprobe -o jsonpath='{.items[0].metadata.name}'` command",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify3-2.sh",
+            "hint": "Please execute `kubectl describe pod <pod-name>` command",
+            "timeout": 10,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get", "kubernetes/describe"]
+      },
+      {
+        "title": "Add a Readiness Probe",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if this yaml file is updated.",
+            "file": "verify4-1.sh",
+            "hint": "Please create a yaml file named deployment.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the Deployment is created in the cluster.",
+            "file": "verify4-2.sh",
+            "hint": "Please create the Deployment via the YAML file in step 2.",
+            "timeout": 10,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      },
+      {
+        "title": "Test the Readiness Probe",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Check if the command is executed",
+            "file": "verify5-2.sh",
+            "hint": "Please execute `kubectl describe pod <pod-name>` command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/get", "kubernetes/describe"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

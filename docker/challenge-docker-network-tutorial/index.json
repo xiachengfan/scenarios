@@ -1,0 +1,154 @@
+{
+  "type": "challenge",
+  "title": "Docker Network Tutorial",
+  "description": "This tutorial will cover the basics of using Docker networks.",
+  "difficulty": "Beginner",
+  "time": 30,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Network",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if my-network exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a network called my-network",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the network was created",
+            "file": "verify1-2.sh",
+            "hint": "Please input 'docker network ls'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Launch Containers in the Network",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if the containers is running",
+            "file": "verify2.sh",
+            "hint": "Please run container1 and container2 with my-network network",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Test Connectivity",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Test container connectivity",
+            "file": "verify3.sh",
+            "hint": "Please use the 'docker exec' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/exec"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Connect a Container to Multiple Networks",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if my-network2 exists",
+            "file": "verify4-1.sh",
+            "hint": "Please create my-network2 network",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if container2 is connected to my-network2",
+            "file": "verify4-2.sh",
+            "hint": "Please use the 'docker network connect' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that container2 is now connected to both networks",
+            "file": "verify4-3.sh",
+            "hint": "Please use 'docker inspect' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network"],
+        "solutions": ["step4-solution.md"]
+      },
+      {
+        "title": "Disconnect a Container From a Network",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Check if container2 is disconnected from my-network",
+            "file": "verify5-1.sh",
+            "hint": "Please use the 'docker network disconnect' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if 'docker network inspect my-network' command is used",
+            "file": "verify5-2.sh",
+            "hint": "Please use the 'docker network inspect' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network"],
+        "solutions": ["step5-solution.md"]
+      },
+      {
+        "title": "Remove a Network",
+        "text": "step6.md",
+        "verify": [
+          {
+            "name": "Check my-network2 does not exists",
+            "file": "verify6-1.sh",
+            "hint": "Please remove my-network2 network",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that my-network2 was removed",
+            "file": "verify6-2.sh",
+            "hint": "Please verify that my-network2 was removed",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/network"],
+        "solutions": ["step6-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

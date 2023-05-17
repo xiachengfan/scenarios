@@ -1,0 +1,145 @@
+{
+  "type": "challenge",
+  "title": "Docker Lifecycle Management",
+  "description": "In this challenge, we learned the basics of Docker lifecycle management.",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Docker Image",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the hello-docker directory exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a directory called hello-docker at /home/labex/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the Dockerfile file exists",
+            "file": "verify1-2.sh",
+            "hint": "Please create a file called Dockerfile at /home/labex/hello-docker/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the index.html file exists",
+            "file": "verify1-3.sh",
+            "hint": "Please create a file called index.html at /home/labex/hello-docker/ path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the my-web-server image exists",
+            "file": "verify1-4.sh",
+            "hint": "Please use 'docker build' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/build"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Run a Docker Container",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if the my-web container start",
+            "file": "verify2-1.sh",
+            "hint": "Please run a container called my-web based on the my-web-server image",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "See the web page served",
+            "file": "verify2-2.sh",
+            "hint": "Please use 'curl' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Manage Docker Containers",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Lists all running containers",
+            "file": "verify3-1.sh",
+            "hint": "Please use 'docker ps' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Stop the my-web container",
+            "file": "verify3-2.sh",
+            "hint": "Please use 'docker stop' command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Remove the my-web container",
+            "file": "verify3-3.sh",
+            "hint": "Please use 'docker rm' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/ps", "docker/stop", "docker/rm"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Clean up",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Stop all running containers",
+            "file": "verify4-1.sh",
+            "hint": "Please stop all running containers",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Remove all running containers",
+            "file": "verify4-2.sh",
+            "hint": "Please remove all running containers",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Remove the my-web-server image",
+            "file": "verify4-3.sh",
+            "hint": "Please use 'docker rmi' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/rmi", "docker/stop", "docker/rm"],
+        "solutions": ["step4-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

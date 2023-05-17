@@ -1,0 +1,109 @@
+{
+  "type": "challenge",
+  "title": "DataFrame Combiner",
+  "description": "In this challenge, we will explore the different ways to combine Pandas DataFrames.",
+  "difficulty": "Beginner",
+  "time": 60,
+  "details": {
+    "steps": [
+      {
+        "title": "Create DataFrame",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if create_dataframe is implemented.",
+            "file": "verify1.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["pandas/dataframe", "numpy/random"],
+        "solutions": ["create_dataframe.py"]
+      },
+      {
+        "title": "Concatenating DataFrames",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if concatenation_dataframes is implemented.",
+            "file": "verify2.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["pandas/dataframe", "pandas/concat"],
+        "solutions": ["concatenating_dataframes.py"]
+      },
+      {
+        "title": "Merging DataFrames",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if merging_dataframes is implemented.",
+            "file": "verify3.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["pandas/dataframe", "pandas/merge"],
+        "solutions": ["merging_dataframes.py"]
+      },
+      {
+        "title": "Joining DataFrames",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if joining_dataframes is implemented.",
+            "file": "verify4.sh",
+            "hint": "Test error, Please check.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["pandas/dataframe", "pandas/join"],
+        "solutions": ["joining_dataframes.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "create_dataframe.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "concatenating_dataframes.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "merging_dataframes.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "joining_dataframes.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}
