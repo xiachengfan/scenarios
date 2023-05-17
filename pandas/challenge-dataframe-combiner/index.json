@@ -79,19 +79,23 @@
         {
           "file": "*_test.py",
           "target": "/tmp"
-        },{
+        },
+        {
           "file": "create_dataframe.py",
           "target": "/home/labex/project",
           "chmod": "ugo+rwx"
-        },{
+        },
+        {
           "file": "concatenating_dataframes.py",
           "target": "/home/labex/project",
           "chmod": "ugo+rwx"
-        },{
+        },
+        {
           "file": "merging_dataframes.py",
           "target": "/home/labex/project",
           "chmod": "ugo+rwx"
-        },{
+        },
+        {
           "file": "joining_dataframes.py",
           "target": "/home/labex/project",
           "chmod": "ugo+rwx"

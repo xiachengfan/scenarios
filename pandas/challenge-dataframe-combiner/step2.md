@@ -12,7 +12,7 @@ In this sub-challenge, you will work on concatenating two DataFrames.
 
 You can run the `concatenating_dataframes.py` file to verify the correctness of the code:
 
-``` zsh
+```zsh
 python3 concatenating_dataframes.py
 # Output:
 #     A   B   C

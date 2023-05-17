@@ -2,7 +2,7 @@
 
 In this sub-challenge, you will explore joining DataFrames using index-based joining.
 
-## TODO 
+## TODO
 
 - Complete the `joining_dataframes` function in the `joining_dataframes.py`.
 - Use the `create_dataframe` function to generate two DataFrame, `df5` and `df6`, each containing 3 columns `('D', 'E', 'F')` and 5 rows of random integers.
@@ -13,7 +13,7 @@ In this sub-challenge, you will explore joining DataFrames using index-based joi
 
 You can run the `joining_dataframes.py` file to verify the correctness of the code:
 
-``` zsh
+```zsh
 python3 joining_dataframes.py
 # Output:
 #     D_left  E_left  F_left  D_right  E_right  F_right

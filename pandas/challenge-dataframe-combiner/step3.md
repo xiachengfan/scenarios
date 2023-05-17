@@ -13,7 +13,7 @@ In this sub-challenge, you will practice merging DataFrames based on a common co
 
 You can run the `merging_dataframes.py` file to verify the correctness of the code:
 
-``` zsh
+```zsh
 python3 merging_dataframes.py
 # Output:
 #    A_x  B_x  C_x Key  A_y  B_y  C_y

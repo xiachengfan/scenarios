@@ -11,7 +11,7 @@ In this sub-challenge, you will create a DataFrame.
 
 You can run the `create_dataframe.py` file to verify the correctness of the code:
 
-``` zsh
+```zsh
 python3 create_dataframe.py
 # Output:
 #     E   X   A   M   P   L   E
