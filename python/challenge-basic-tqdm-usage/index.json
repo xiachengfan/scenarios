@@ -1,0 +1,89 @@
+{
+  "type": "challenge",
+  "title": "Basic Tqdm Usage",
+  "description": "This challenge will test your ability to use the `tqdm` library to display progress bars in various scenarios.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Function Runner",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check that the function_runner function is written correctly",
+            "file": "verify1.sh",
+            "hint": "Please check your code.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/tqdm", "python/for_loop"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "List Length Updater",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check that the list_length_updater function is written correctly",
+            "file": "verify2.sh",
+            "hint": "Please check your code.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/tqdm", "python/for_loop"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Range Progress",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check that the range_progress function is written correctly",
+            "file": "verify3.sh",
+            "hint": "Please check your code.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/tqdm", "python/for_loop"],
+        "solutions": ["step3-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*_test.py",
+          "target": "/tmp"
+        },
+        {
+          "file": "function_runner.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "list_length_updater.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        },
+        {
+          "file": "range_progress.py",
+          "target": "/home/labex/project",
+          "chmod": "777"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

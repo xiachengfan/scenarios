@@ -1,0 +1,110 @@
+{
+  "type": "challenge",
+  "title": "Docker Create Command",
+  "description": "In this challenge, you will learn how to use the docker create command.",
+  "difficulty": "Beginner",
+  "time": 60,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Container from an Image",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Test if the nginx container is created.",
+            "file": "verify1.sh",
+            "hint": "The nginx container does not exist.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/create"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Name the Container",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Test if an nginx container with the name my-nginx is created",
+            "file": "verify2.sh",
+            "hint": "The nginx container with the name my-nginx does not exist.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/create"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Map Ports",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if the host port mapping is in the container configuration.",
+            "file": "verify3-1.sh",
+            "hint": "The port mapping of my-nginx2 container is not set.",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if port 80 is mapped in my-nginx container.",
+            "file": "verify3-2.sh",
+            "hint": "Port 80 is not mapped in my-nginx2 container.",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if port 8080 is mapped in the host.",
+            "file": "verify3-3.sh",
+            "hint": "Port 8080 is not mapped in the host.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/create", "docker/inspect"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Set Environment Variables",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if the environment variable is in the container configuration.",
+            "file": "verify4.sh",
+            "hint": "The NGINX_HOST environment variable for the my-nginx3 container is not set.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/create", "docker/inspect"],
+        "solutions": ["step4-solution.md"]
+      },
+      {
+        "title": "Mount Volumes",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Check if the volume mount of the container is configured in the container.",
+            "file": "verify5.sh",
+            "hint": "The unmounted directory /var/www for the my-nginx4 container.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/create", "docker/inspect"],
+        "solutions": ["step5-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "type": "challenge",
+  "title": "Find Edges",
+  "description": "In this challenge, you will learn skills about implementing edge detection using OpenCV-Python.",
+  "difficulty": "Beginner",
+  "time": 20,
+  "details": {
+    "steps": [
+      {
+        "title": "Reading and Preprocessing the Image",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Test the implement of read_and_preprocess_image function",
+            "file": "verify1.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "numpy/array",
+          "opencv/imread",
+          "opencv/cvt_color",
+          "opencv/gaussian_blur"
+        ],
+        "solutions": ["read_and_preprocess_image.py"]
+      },
+      {
+        "title": "Applying Edge Detection Algorithms",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Test the implement of apply_edge_detection function",
+            "file": "verify2.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "numpy/array",
+          "opencv/canny",
+          "opencv/laplacian",
+          "opencv/thresholding"
+        ],
+        "solutions": ["apply_edge_detection.py"]
+      },
+      {
+        "title": "Fine-Tuning and Saving the Result",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Test the implement of fine_tune_and_save_result function",
+            "file": "verify3.sh",
+            "hint": "Please create a function that correctly implements the requirements.",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["numpy/array", "opencv/add_weighted", "opencv/imwrite"],
+        "solutions": ["fine_tune_and_save_result.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "read_and_preprocess_image.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "apply_edge_detection.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "fine_tune_and_save_result.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "test_read_and_preprocess_image.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "test_apply_edge_detection.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "test_fine_tune_and_save_result.py",
+          "target": "/tmp",
+          "chmod": "777"
+        },
+        {
+          "file": "image_test.jpg",
+          "target": "/tmp",
+          "chmod": "777"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

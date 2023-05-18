@@ -1,0 +1,106 @@
+{
+  "type": "lab",
+  "title": "Kubernetes Display Resource Usage",
+  "description": "Helps performance, troubleshoot, allocate. Use kubectl top.Set alerts for limits or create metrics for monitoring.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Enable the Metrics-Server",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the command is executed",
+            "file": "verify1-1.sh",
+            "hint": "Please execute `minikube addons enable metrics-server` command",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Need to wait for the metrics-server status to be running.",
+            "file": "verify1-2.sh",
+            "hint": "Please execute `kubectl get pods --namespace=kube-system |grep metrics-server` nodes commands",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/top"]
+      },
+      {
+        "title": "Display Cpu and Memory Usage",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Need to wait for the metrics-server status to be running.",
+            "file": "verify2-1.sh",
+            "hint": "Please execute `kubectl get pods --namespace=kube-system |grep metrics-server` nodes commands",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed",
+            "file": "verify2-2.sh",
+            "hint": "Please execute `kubectl top pods --namespace=kube-system` and `kubectl top` nodes commands and get the correct result.",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/top"]
+      },
+      {
+        "title": "Display Container Cpu and Memory Usage",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Need to wait for the metrics-server status to be running.",
+            "file": "verify2-1.sh",
+            "hint": "Please execute `kubectl get pods --namespace=kube-system |grep metrics-server` nodes commands",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the yaml file exists.",
+            "file": "verify3-1.sh",
+            "hint": "Please create a yaml file named myapp-pod.yaml in the `/home/labex/project` directory",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the Pod is created in the cluster.",
+            "file": "verify3-2.sh",
+            "hint": "Please create the Pod via the YAML file in step 1.",
+            "timeout": 10,
+            "showstderr": false
+          },
+          {
+            "name": "Check if the command is executed and the resource usage of the pod",
+            "file": "verify3-3.sh",
+            "hint": "Please execute `kubectl top pod myapp-pod --namespace=default --containers=true` command and returns the resource usage of the pod",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-instance-ubuntu:2204"
+  }
+}

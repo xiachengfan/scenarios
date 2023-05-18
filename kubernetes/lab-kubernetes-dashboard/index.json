@@ -1,0 +1,108 @@
+{
+  "type": "lab",
+  "title": "Kubernetes Dashboard",
+  "description": "In this lab, we will learn how to deploy and use Kubernetes Dashboard to manage and monitor a Kubernetes cluster.",
+  "difficulty": "Intermediate",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Deploying Kubernetes Dashboard",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if the Kubernetes Dashboard exists",
+            "file": "verify1-1.sh",
+            "hint": "Please input 'kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the dashboard is running",
+            "file": "verify1-2.sh",
+            "hint": "Please input 'kubectl get pods -n kubernetes-dashboard'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/get",
+          "kubernetes/apply",
+          "kubernetes/k8s_dashboard"
+        ]
+      },
+      {
+        "title": "Creating a Service Account and Cluster Role Binding",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if service account named admin-user and a cluster role binding named admin-user exists",
+            "file": "verify2.sh",
+            "hint": "Please create a service account named admin-user and a cluster role binding named admin-user",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["kubernetes/apply", "kubernetes/k8s_dashboard"]
+      },
+      {
+        "title": "Accessing Kubernetes Dashboard",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Create a token to log in to the Kubernetes Dashboard",
+            "file": "verify3-1.sh",
+            "hint": "Please input 'kubectl -n kubernetes-dashboard create token admin-user'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Change the service type of the kubernetes dashboard to NodePort in line 33",
+            "file": "verify3-2.sh",
+            "hint": "Please input 'kubectl edit service -n kubernetes-dashboard kubernetes-dashboard'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Get the nodeport of the kubernetes dashboard",
+            "file": "verify3-3.sh",
+            "hint": "Please input 'kubectl get service -n kubernetes-dashboard'",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Get the kubernetes node ip address",
+            "file": "verify3-4.sh",
+            "hint": "Please input 'kubectl get node -o wide'",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": [
+          "kubernetes/create",
+          "kubernetes/edit",
+          "kubernetes/get",
+          "kubernetes/k8s_dashboard"
+        ]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}

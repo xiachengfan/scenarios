@@ -1,0 +1,179 @@
+{
+    "type": "challenge",
+    "title": "Running Containers in Pods",
+    "description": "In this challenge, you will learn how to run containers in Kubernetes Pods.",
+    "difficulty": "Beginner",
+    "time": 25,
+    "details": {
+        "steps": [
+            {
+                "title": "Create a Pod with a Single Container",
+                "text": "step1.md",
+                "verify": [
+                    {
+                        "name": "Check if pod-single-container.yaml file exists",
+                        "file": "verify1-1.sh",
+                        "hint": "Please create a file called pod-single-container.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if my-pod pod exists",
+                        "file": "verify1-2.sh",
+                        "hint": "Please use 'kubectl apply' command and check YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step1-solution.md"
+                ]
+            },
+            {
+                "title": "Create a Pod with Multiple Containers",
+                "text": "step2.md",
+                "verify": [
+                    {
+                        "name": "Check if pod-multiple-containers.yaml file exists",
+                        "file": "verify2-1.sh",
+                        "hint": "Please create a file called pod-multiple-containers.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if my-pod pod with two caontainers exists",
+                        "file": "verify2-2.sh",
+                        "hint": "Please use 'kubectl apply' command and check YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step2-solution.md"
+                ]
+            },
+            {
+                "title": "Create a Pod with Environment Variables",
+                "text": "step3.md",
+                "verify": [
+                    {
+                        "name": "Check if pod-env-vars.yaml file exists",
+                        "file": "verify3-1.sh",
+                        "hint": "Please create a file called pod-env-vars.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check the my-container container environment variable",
+                        "file": "verify3-2.sh",
+                        "hint": "Please use 'kubectl apply' command and check YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step3-solution.md"
+                ]
+            },
+            {
+                "title": "Create a Pod with ConfigMaps",
+                "text": "step4.md",
+                "verify": [
+                    {
+                        "name": "Check if configmap exists",
+                        "file": "verify4-1.sh",
+                        "hint": "Please use 'kubectl create configmap' command to Create a ConfigMap named my-config with a Key of my-key and a value of my-value",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if pod-configmap.yaml file exists",
+                        "file": "verify4-2.sh",
+                        "hint": "Please create a file called pod-configmap.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if configmap of my-container exists",
+                        "file": "verify4-3.sh",
+                        "hint": "Please use 'kubectl apply' command and check the YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/create",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step4-solution.md"
+                ]
+            },
+            {
+                "title": "Create a Pod with Persistent Volumes",
+                "text": "step5.md",
+                "verify": [
+                    {
+                        "name": "Check if my-pv pv exists",
+                        "file": "verify5-1.sh",
+                        "hint": "Please check the YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if my-pvc pvc exists",
+                        "file": "verify5-2.sh",
+                        "hint": "Please check the YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if volume mount of my-container",
+                        "file": "verify5-3.sh",
+                        "hint": "Please check the YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step5-solution.md"
+                ]
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "background": "setup.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "",
+                    "target": "/tmp"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "vnc-instance-ubuntu:2204"
+    }
+}

@@ -1,0 +1,10 @@
+section {
+  /* TODO: Add your CSS code here */
+  display: flex; /* step 1 */
+  flex-wrap: wrap; /* step 2 */
+  justify-content: space-between; /* step 3 */
+
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}

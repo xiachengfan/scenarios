@@ -1,0 +1,169 @@
+{
+    "type": "challenge",
+    "title": "Configuring Apps with Secrets",
+    "description": "In this challenge, you will learn how to use Kubernetes Secrets to securely manage sensitive information such as passwords, API keys, and other confidential data.",
+    "difficulty": "Beginner",
+    "time": 25,
+    "details": {
+        "steps": [
+            {
+                "title": "Create a Secret",
+                "text": "step1.md",
+                "verify": [
+                    {
+                        "name": "Check if the my-secret.yaml file exists",
+                        "file": "verify1-1.sh",
+                        "hint": "Please create a file called my-secret.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if the my-secret secret exists",
+                        "file": "verify1-2.sh",
+                        "hint": "Please use 'kubectl apply' command and check the YAML file",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Verify that the Secret was created",
+                        "file": "verify1-3.sh",
+                        "hint": "Please use 'kubectl get' command",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step1-solution.md"
+                ]
+            },
+            {
+                "title": "Use the Secret in Your Application",
+                "text": "step2.md",
+                "verify": [
+                    {
+                        "name": "Check if the my-app.yaml file exists",
+                        "file": "verify2-1.sh",
+                        "hint": "Please create a file called my-app.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if the my-app deployment exists",
+                        "file": "verify2-2.sh",
+                        "hint": "Please use 'kubectl apply' command and check the my-app.yaml file",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Verify that the Deployment was created",
+                        "file": "verify2-3.sh",
+                        "hint": "Please use 'kubectl get' command",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply",
+                    "kubernetes/get"
+                ],
+                "solutions": [
+                    "step2-solution.md"
+                ]
+            },
+            {
+                "title": "Verify the Configuration",
+                "text": "step3.md",
+                "verify": [
+                    {
+                        "name": "Find the name of the pod running with the my-app Deployment",
+                        "file": "verify3-1.sh",
+                        "hint": "Please use 'kubectl get' command",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Open a shell session in the container running",
+                        "file": "verify3-2.sh",
+                        "hint": "Please use 'kubectl exec' command",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/get",
+                    "kubernetes/exec"
+                ],
+                "solutions": [
+                    "step3-solution.md"
+                ]
+            },
+            {
+                "title": "Mount the Secret as a Volume in a Pod",
+                "text": "step4.md",
+                "verify": [
+                    {
+                        "name": "Check if the pod.yaml file exists",
+                        "file": "verify4-1.sh",
+                        "hint": "Please create a file called pod.yaml at /home/labex/project/ path",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if the secret-pod Pod exists",
+                        "file": "verify4-2.sh",
+                        "hint": "Please use 'kubectl apply' command and check the pod.yaml file",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/apply"
+                ],
+                "solutions": [
+                    "step4-solution.md"
+                ]
+            },
+            {
+                "title": "Verify the Secret as a Volume in a Pod",
+                "text": "step5.md",
+                "verify": [
+                    {
+                        "name": "Open a shell session in the secret-pod",
+                        "file": "verify5.sh",
+                        "hint": "Please use 'kubectl exec' command",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "kubernetes/exec"
+                ],
+                "solutions": [
+                    "step5-solution.md"
+                ]
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "background": "setup.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "",
+                    "target": "/tmp"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "vnc-instance-ubuntu:2204"
+    }
+}

@@ -1,0 +1,80 @@
+{
+  "type": "challenge",
+  "title": "Currency Exchange",
+  "description": "In this challenge, you will learn to create functions that help with currency exchange.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Get Exchange Rate",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Testing get_exchange_rate function",
+            "file": "verify1.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": [
+          "python/json",
+          "python/try_except",
+          "python/open",
+          "python/math_operator",
+          "python/raise_errors",
+          "python/function_basic"
+        ],
+        "solutions": ["get_exchange_rate.py"]
+      },
+      {
+        "title": "Currency Converter",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Testing currency_conversion function",
+            "file": "verify2.sh",
+            "hint": "Please replace this text with the hint of the verify script",
+            "timeout": 0,
+            "showstderr": true
+          }
+        ],
+        "skills": ["python/math_operator", "python/function_basic"],
+        "solutions": ["currency_conversion.py"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "get_exchange_rate.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "currency_conversion.py",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "usd.json",
+          "target": "/home/labex/project"
+        },
+        {
+          "file": "*_test.py",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "type": "challenge",
+  "title": "Flexible Card",
+  "description": "The Flexbox Challenge is a web development exercise that challenges developers to create a responsive card layout using CSS Flexbox.",
+  "difficulty": "Beginner",
+  "time": 15,
+  "details": {
+    "steps": [
+      {
+        "title": "Flexible Card",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check the file path",
+            "file": "verify0.sh",
+            "hint": "Check whether the chrome driver exists.",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check the answer",
+            "file": "verify1.sh",
+            "hint": "Please use flexbox properties.",
+            "timeout": 30,
+            "showstderr": false
+          }
+        ],
+        "skills": [],
+        "solutions": ["flexible_card.css"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "test_flexible_card.js",
+          "target": "/tmp"
+        },
+        {
+          "file": "flexible_card.html",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": "flexible_card.css",
+          "target": "/home/labex/project",
+          "chmod": "ugo+rwx"
+        },
+        {
+          "file": ".puppeteerrc.cjs",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "webide-ubuntu:2204"
+  },
+  "license": {
+    "name": " CC0-1.0",
+    "url": "https://github.com/mdn/learning-area/blob/main/LICENSE",
+    "repo": "https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html"
+  }
+}

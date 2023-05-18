@@ -1,0 +1,139 @@
+{
+  "type": "challenge",
+  "title": "Manage Data in Containers",
+  "description": "In this challenge, you will learn how to manage data in containers.",
+  "difficulty": "Beginner",
+  "time": 25,
+  "details": {
+    "steps": [
+      {
+        "title": "Create a Docker Volume",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if myvolume exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create a volume called myvolume",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "List all the Docker volumes",
+            "file": "verify1-2.sh",
+            "hint": "Please list all the Docker volumes",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/volume"],
+        "solutions": ["step1-solution.md"]
+      },
+      {
+        "title": "Mount a Docker Volume in a Container",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if my-container exists",
+            "file": "verify2-1.sh",
+            "hint": "Please create a container called my-container based on nginx image and mounts the myvolume volume as a directory inside the container at the /app/data path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the volume is mounted correctly",
+            "file": "verify2-2.sh",
+            "hint": "Please use 'docker inspect' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run", "docker/inspect"],
+        "solutions": ["step2-solution.md"]
+      },
+      {
+        "title": "Write Data to a Docker Volume",
+        "text": "step3.md",
+        "verify": [
+          {
+            "name": "Check if /app/data/hello.txt exists in my-container container",
+            "file": "verify3-1.sh",
+            "hint": "Please exec container and create a file hello.txt at /app/data path",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Verify that the file is created on your host machine",
+            "file": "verify3-2.sh",
+            "hint": "Please use 'docker volume inspect' command",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/exec", "docker/volume"],
+        "solutions": ["step3-solution.md"]
+      },
+      {
+        "title": "Read Data From a Docker Volume",
+        "text": "step4.md",
+        "verify": [
+          {
+            "name": "Check if /app/data/hello.txt reads",
+            "file": "verify4.sh",
+            "hint": "Please exec container and read the file /app/data/hello.txt",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/exec"],
+        "solutions": ["step4-solution.md"]
+      },
+      {
+        "title": "Backup and Restore a Docker Volume",
+        "text": "step5.md",
+        "verify": [
+          {
+            "name": "Check if myvolume.tar.gz exists at /home/labex path",
+            "file": "verify5-1.sh",
+            "hint": "Please backup myvolume docker volume",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if mynewvolume exists",
+            "file": "verify5-2.sh",
+            "hint": "Please create a volume called mynewvolume",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if hello.txt exists",
+            "file": "verify5-3.sh",
+            "hint": "Please restore a docker volume",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["docker/run", "docker/volume"],
+        "solutions": ["step5-solution.md"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "",
+          "target": "/tmp"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "vnc-instance-ubuntu:2204"
+  }
+}
